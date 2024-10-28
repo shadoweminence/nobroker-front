@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,8 +7,30 @@ import { FaBars } from "react-icons/fa"; // Import the hamburger icon
 import logo from "../../assets/images/title.png";
 import rent from "../../assets/images/rent.png";
 import property from "../../assets/images/property.png";
+import flogo from "../../assets/images/flogo.png";
+import tlogo from "../../assets/images/tlogo.png";
+import glogo from "../../assets/images/glogo.png";
 
 function Navb() {
+
+
+
+  
+  const [showCommercialPlans, setShowCommercialPlans] = useState(false);
+  const [showContactUs, setShowContactUs] = useState(false);
+
+  const toggleCommercialPlans =(event)=>{
+    event.preventDefault();
+    event.stopPropagation(); 
+    setShowCommercialPlans(!showCommercialPlans);
+    
+  }
+
+  const toggleContactUs = (event)=>{
+     event.preventDefault();
+    event.stopPropagation(); 
+    setShowContactUs(!showContactUs);
+  }
   return (
     <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
       <Container fluid>
@@ -48,38 +70,182 @@ function Navb() {
             </Nav.Link>
 
             {/* Dropdown Menu with Hamburger Icon */}
-            <Dropdown align="end">
+            <Dropdown align="end" >
               {" "}
               {/* Aligns the dropdown items to the right */}
               <Dropdown.Toggle
                 variant="link"
                 id="dropdown-basic"
-                className="p-0 text-black" // Text color black and no padding
+                className="p-0 text-black " // Text color black and no padding
               >
                 <FaBars /> Menu
               </Dropdown.Toggle>
               {/* Dropdown menu items */}
-              <Dropdown.Menu className="border-0">
+              <Dropdown.Menu  className="dropdown-menu border-1  no-arrow" >
                 <Dropdown.Item
                   href="#action3"
                   className="text-dark text-decoration-none"
                 >
-                  Menu Item 1
+                 Post Your Property
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="#action4"
                   className="text-dark text-decoration-none"
                 >
-                  Menu Item 2
+                  Rental Agreement
                 </Dropdown.Item>
                 <Dropdown.Item
                   href="#action5"
                   className="text-dark text-decoration-none"
                 >
-                  Menu Item 3
+                  Painting & Cleaning
                 </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Packers and Movers
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Refer & Earn
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Rent Receipts
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                 Tenant Plans
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Owner Plans
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Buyer Plans
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Seller Plans
+                </Dropdown.Item>
+
+              <Dropdown.Item
+                 
+                  className="text-dark text-decoration-none arrow-item" onClick={toggleCommercialPlans}
+                >
+                 Commercial Plans
+
+                  {showCommercialPlans &&(
+                  <>
+
+                  <li>
+                   <Nav.Link> <ul>Tenant Plans</ul> </Nav.Link>
+                   <Nav.Link> <ul>Owner Plans</ul> </Nav.Link>
+                   <Nav.Link> <ul> Buyer Plans</ul> </Nav.Link>
+                   <Nav.Link> <ul>Seller Plans</ul> </Nav.Link>
+                  </li>
+            
+                  </>
+                )}
+                </Dropdown.Item>
+               
+             
+                
+             
+
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Careers
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Corporate Enquiry
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  Blog
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#action5"
+                  className="text-dark text-decoration-none"
+                >
+                  No Broker Support
+                </Dropdown.Item>
+
+               
+
+               <Dropdown.Item
+                  href="#action3"
+                  className="text-dark text-decoration-none arrow-item" onClick={toggleContactUs} 
+                >
+                Contact Us
+                </Dropdown.Item>
+
+                {showContactUs && (
+                  <>
+                   
+
+                   <li>
+                    <ul> Email  <br /> 
+                 hello@noroker.in</ul>
+                   
+               <ul><Nav.Link> <img
+                src={flogo} // Use your imported image here
+                alt="Rent Icon"
+                width="50" // Adjust width as needed
+                height="auto" // Maintain aspect ratio
+                padding="0"
+              /></Nav.Link>
+              
+              <Nav.Link><img
+                src={tlogo} // Use your imported image here
+                alt="Rent Icon"
+                width="50" // Adjust width as needed
+                height="auto" // Maintain aspect ratio
+                padding="0"
+              /></Nav.Link>
+
+              <Nav.Link>
+               <img
+                src={glogo} // Use your imported image here
+                alt="Rent Icon"
+                width="50" // Adjust width as needed
+                height="auto" // Maintain aspect ratio
+                padding="0"
+              /></Nav.Link>
+              
+              </ul>
+              </li>
+
+                  </>
+                )}
+
+              
+
               </Dropdown.Menu>
-            </Dropdown>
+              </Dropdown>
+
+             
           </Nav>
         </Navbar.Collapse>
       </Container>

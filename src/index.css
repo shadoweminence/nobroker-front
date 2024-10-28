@@ -1,0 +1,30 @@
+/* Remove arrow beside "Menu" dropdown */
+.no-arrow::after {
+  display: none !important;
+}
+
+/* Add arrow beside "Commercial Plans" and "Contact Us" */
+.arrow-item::after {
+  content: "\25BC"; /* Down arrow symbol */
+  float: right;
+  margin-left: 10px;
+}
+
+.dropdown-menu {
+  min-width: 230px;
+  font-size: small;
+  padding: 20px;
+}
+/* Add a border line between each dropdown item */
+.dropdown-menu .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #8d0c0c;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px;
+}
+
+/* Remove border for items inside the toggled sections */
+.dropdown-menu .no-border {
+  border-bottom: none;
+}
