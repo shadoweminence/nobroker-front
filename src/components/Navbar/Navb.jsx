@@ -4,9 +4,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown"; // Import Dropdown from Bootstrap
 import { FaBars } from "react-icons/fa"; // Import the hamburger icon
-import logo from "./title.png";
-import rent from "./rent.png";
-import property from "./property.png";
+import logo from "../../assets/images/title.png";
+import rent from "../../assets/images/rent.png";
+import property from "../../assets/images/property.png";
 
 function Navb() {
   return (
@@ -14,7 +14,7 @@ function Navb() {
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand href="#">
-          <img
+          <img 
             src={logo} // Use your imported image here
             alt="Brand Logo"
             width="160" // Adjust width as needed
