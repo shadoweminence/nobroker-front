@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown"; // Import Dropdown from Bootstrap
-import { FaBars } from "react-icons/fa"; // Import the hamburger icon
+import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa"; // Import the hamburger icon
 import logo from "../../assets/images/title.png";
 import rent from "../../assets/images/rent.png";
 import property from "../../assets/images/property.png";
@@ -76,12 +76,12 @@ function Navb() {
               <Dropdown.Toggle
                 variant="link"
                 id="dropdown-basic"
-                className="p-0 text-black " // Text color black and no padding
+                className="p-0 text-black no-arrow " // Text color black and no padding
               >
                 <FaBars /> Menu
               </Dropdown.Toggle>
               {/* Dropdown menu items */}
-              <Dropdown.Menu  className="dropdown-menu border-1  no-arrow" >
+              <Dropdown.Menu  className="dropdown-menu border-1  " >
                 <Dropdown.Item
                   href="#action3"
                   className="text-dark text-decoration-none"
@@ -145,21 +145,20 @@ function Navb() {
 
               <Dropdown.Item
                  
-                  className="text-dark text-decoration-none arrow-item" onClick={toggleCommercialPlans}
+                  className="text-dark text-decoration-none " onClick={toggleCommercialPlans} style={{cursor:"pointer"}}
                 >
                  Commercial Plans
+                 {showCommercialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
 
-                  {showCommercialPlans &&(
-                  <>
-
-                  <li>
-                   <Nav.Link> <ul>Tenant Plans</ul> </Nav.Link>
-                   <Nav.Link> <ul>Owner Plans</ul> </Nav.Link>
-                   <Nav.Link> <ul> Buyer Plans</ul> </Nav.Link>
-                   <Nav.Link> <ul>Seller Plans</ul> </Nav.Link>
-                  </li>
-            
-                  </>
+                 {showCommercialPlans && (
+                 <li>
+                   <ul className="custom-dropdown-ul">
+                      <Nav.Link>Tenant Plan</Nav.Link>
+                      <Nav.Link>Owner Plan</Nav.Link>
+                      <Nav.Link>Buyer Plan</Nav.Link>
+                      <Nav.Link>Seller Plans</Nav.Link>
+                    </ul>
+                 </li>
                 )}
                 </Dropdown.Item>
                
@@ -196,20 +195,23 @@ function Navb() {
 
                <Dropdown.Item
                   href="#action3"
-                  className="text-dark text-decoration-none arrow-item" onClick={toggleContactUs} 
+                  className="text-dark text-decoration-none " onClick={toggleContactUs} 
                 >
-                Contact Us
-                </Dropdown.Item>
+                Contact Us 
+                {showContactUs ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+               
 
                 {showContactUs && (
                   <>
                    
 
                    <li>
-                    <ul> Email  <br /> 
-                 hello@noroker.in</ul>
+                    <ul className="custom-dropdown-ul"> Email  <br /> 
+                 hello@noroker.in
                    
-               <ul><Nav.Link> <img
+            
+                  <div className="d-flex justify-content-center">
+                    <Nav.Link> <img
                 src={flogo} // Use your imported image here
                 alt="Rent Icon"
                 width="50" // Adjust width as needed
@@ -233,14 +235,15 @@ function Navb() {
                 height="auto" // Maintain aspect ratio
                 padding="0"
               /></Nav.Link>
-              
+              </div>
               </ul>
               </li>
+
 
                   </>
                 )}
 
-              
+               </Dropdown.Item>
 
               </Dropdown.Menu>
               </Dropdown>

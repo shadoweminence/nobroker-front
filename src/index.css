@@ -3,13 +3,18 @@
   display: none !important;
 }
 
-/* Add arrow beside "Commercial Plans" and "Contact Us" */
-.arrow-item::after {
-  content: "\25BC"; /* Down arrow symbol */
-  float: right;
-  margin-left: 10px;
+/* for the pointer beside the inside dropdown  */
+.custom-dropdown-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
+.custom-dropdown-ul li {
+  padding: 5px 0;
+}
+
+/* for the whole menu  */
 .dropdown-menu {
   min-width: 230px;
   font-size: small;
@@ -20,6 +25,7 @@
   border-bottom: 1px solid #8d0c0c;
 }
 
+/* to increase the padding between menu items  */
 .dropdown-menu .dropdown-item {
   padding: 10px;
 }
