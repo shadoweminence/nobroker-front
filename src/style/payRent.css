@@ -1,0 +1,10 @@
+form#payRentForm input,
+form#payRentForm select {
+    border: 1px solid #b5b4b4;
+    padding: 8px;
+    outline: none;
+}
+
+form#payRentForm input:focus {
+    border: 1px solid #383737;
+}
