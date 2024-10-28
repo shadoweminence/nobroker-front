@@ -1,16 +1,13 @@
-import { useState } from 'react'
+import React from "react";
 
-import './App.css'
-import Navb from './components/Navbar/Navb'
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <Navb/>
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
