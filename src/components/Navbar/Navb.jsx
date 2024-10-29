@@ -10,13 +10,44 @@ import property from "../../assets/images/property.png";
 import flogo from "../../assets/images/flogo.png";
 import tlogo from "../../assets/images/tlogo.png";
 import glogo from "../../assets/images/glogo.png";
+import neww from "../../assets/images/neww.png";
 
 function Navb() {
-
-
+ const [user, setUser] = useState({ name: 'John Doe' });
+ const [showUserOptions, setShowUserOptions] = useState(false);
+const [showResidentialPlans, setShowResidentialPlans] = useState(false);
+const [showDashboard, setShowDashboard] = useState(false);
+const [showListing, setShowListing] = useState(false);
   
   const [showCommercialPlans, setShowCommercialPlans] = useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
+
+
+  const toggleShowUserOptions =()=>{
+    setShowUserOptions(!showUserOptions);
+    
+  }
+
+const toggleResidentialPlans =(event)=>{
+    event.preventDefault();
+    event.stopPropagation(); 
+    setShowResidentialPlans(!showResidentialPlans);
+    
+  }
+
+  const toggleDashboard =(event)=>{
+    event.preventDefault();
+    event.stopPropagation(); 
+    setShowDashboard(!showDashboard);
+    
+  }
+
+  const toggleListing =(event)=>{
+    event.preventDefault();
+    event.stopPropagation(); 
+    setShowListing(!showListing);
+    
+  }
 
   const toggleCommercialPlans =(event)=>{
     event.preventDefault();
@@ -31,7 +62,7 @@ function Navb() {
     setShowContactUs(!showContactUs);
   }
   return (
-    <Navbar expand="lg" className="bg-body-tertiary " fixed="top" style={{fontSize:'0.9rem'}}>
+    <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top" >
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand href="#">
@@ -61,18 +92,160 @@ function Navb() {
                 height="auto" // Maintain aspect ratio
               />
             </Nav.Link>
-            <Nav.Link href="#signup" >
+
+            {user ?(
+              <>
+              <Nav.Link href="#action2">
+              <img
+                src={neww} // Use your imported image here
+                alt="Property Icon"
+                width="40" // Adjust width as needed
+                height="auto" // Maintain aspect ratio
+              />
+            </Nav.Link>
+              <Dropdown align="end" onToggle={toggleShowUserOptions}>
+                <Dropdown.Toggle
+                variant="link"
+                id="dropdown-basic"
+               className="p-0 text-black no-arrow " // Text color black and no padding
+              >
+               <i class="fa-regular fa-circle-user"  ></i> {user.name}  {showUserOptions ?(<FaChevronUp className="ms-1"/>):(<FaChevronDown className="ms-1"/>)}
+
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="dropdown-menu border-1">
+                 <Dropdown.Item
+                  href="#action3"
+                  className="text-dark text-decoration-none"
+                  
+                >
+                Profile
+                </Dropdown.Item>
+
+                 <Dropdown.Item
+                  href="#action3"
+                  className="text-dark text-decoration-none"
+                >
+                My Chats
+                </Dropdown.Item>
+
+                <Dropdown.Item
+                  className="text-dark text-decoration-none " onClick={toggleResidentialPlans} style={{cursor:"pointer"}}
+                >
+                 My Residential Plans
+                 {showResidentialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+
+                 {showResidentialPlans && (
+                 <li>
+                   <ul className="custom-dropdown-ul">
+                      <Nav.Link>Tenant Plan</Nav.Link>
+                      <Nav.Link>Owner Plan</Nav.Link>
+                      <Nav.Link>Buyer Plan</Nav.Link>
+                      <Nav.Link>Seller Plans</Nav.Link>
+                    </ul>
+                 </li>
+                )}
+                </Dropdown.Item>
+
+                 <Dropdown.Item
+                  className="text-dark text-decoration-none " onClick={toggleCommercialPlans} style={{cursor:"pointer"}}
+                >
+                  My Commercial Plan
+                 {showCommercialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+
+                 {showCommercialPlans && (
+                 <li>
+                   <ul className="custom-dropdown-ul">
+                      <Nav.Link>Tenant Plan</Nav.Link>
+                      <Nav.Link>Owner Plan</Nav.Link>
+                      <Nav.Link>Buyer Plan</Nav.Link>
+                      <Nav.Link>Seller Plans</Nav.Link>
+                    </ul>
+                 </li>
+                )}
+                </Dropdown.Item>    
+
+                    <Dropdown.Item
+                 
+                  className="text-dark text-decoration-none " onClick={toggleDashboard} style={{cursor:"pointer"}}
+                >
+                 My Dashboard
+                 {showDashboard ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+
+                 {showDashboard && (
+                 <li>
+                   <ul className="custom-dropdown-ul">
+                      <Nav.Link>Tenant Plan</Nav.Link>
+                      <Nav.Link>Owner Plan</Nav.Link>
+                      <Nav.Link>Buyer Plan</Nav.Link>
+                      <Nav.Link>Seller Plans</Nav.Link>
+                    </ul>
+                 </li>
+                )}
+                </Dropdown.Item>
+
+                    <Dropdown.Item
+                 
+                  className="text-dark text-decoration-none " onClick={toggleListing} style={{cursor:"pointer"}}
+                >
+                 My Listing
+                 {showListing ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+
+                 {showListing && (
+                 <li>
+                   <ul className="custom-dropdown-ul">
+                      <Nav.Link>Tenant Plan</Nav.Link>
+                      <Nav.Link>Owner Plan</Nav.Link>
+                      <Nav.Link>Buyer Plan</Nav.Link>
+                      <Nav.Link>Seller Plans</Nav.Link>
+                    </ul>
+                 </li>
+                )}
+                </Dropdown.Item>
+
+                 <Dropdown.Item
+                  href="#action3"
+                  className="text-dark text-decoration-none"
+                >
+               My Rental Adreements
+                </Dropdown.Item>
+
+                 <Dropdown.Item
+                  href="#action3"
+                  className="text-dark text-decoration-none"
+                >
+                Sign Out
+                </Dropdown.Item>
+              </Dropdown.Menu>
+                </Dropdown>
+                <Nav.Link href="#" disabled >
+              |
+            </Nav.Link>
+              <Nav.Link href="#" >
+              <i class="fa-solid fa-bell"></i>
+            </Nav.Link>
+
+            <Nav.Link href="#" disabled >
+              |
+            </Nav.Link>
+                </>
+
+            
+            ):(
+              <>
+               <Nav.Link href="#signup" >
               Sign Up
             </Nav.Link>
-            <Nav.Link href="#signup" disabled >
+            <Nav.Link href="#" disabled >
               |
             </Nav.Link>
             <Nav.Link href="#login" >
              Log In
             </Nav.Link>
-             <Nav.Link href="#signup" disabled >
+             <Nav.Link href="#" disabled >
               |
-            </Nav.Link>
+            </Nav.Link></>
+            )}
+           
 
             {/* Dropdown Menu with Hamburger Icon */}
             <Dropdown align="end" >
