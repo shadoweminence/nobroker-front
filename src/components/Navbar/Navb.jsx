@@ -14,7 +14,6 @@ import glogo from "../../assets/images/glogo.png";
 function Navb() {
 
 
-
   
   const [showCommercialPlans, setShowCommercialPlans] = useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
@@ -32,7 +31,7 @@ function Navb() {
     setShowContactUs(!showContactUs);
   }
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
+    <Navbar expand="lg" className="bg-body-tertiary " fixed="top" style={{fontSize:'0.9rem'}}>
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand href="#">
@@ -40,7 +39,7 @@ function Navb() {
             src={logo} // Use your imported image here
             alt="Brand Logo"
             width="160" // Adjust width as needed
-            height="auto" // Maintain aspect ratio
+        
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -62,11 +61,17 @@ function Navb() {
                 height="auto" // Maintain aspect ratio
               />
             </Nav.Link>
-            <Nav.Link href="#signup" disabled>
+            <Nav.Link href="#signup" >
               Sign Up
             </Nav.Link>
-            <Nav.Link href="#login" disabled>
-              Login
+            <Nav.Link href="#signup" disabled >
+              |
+            </Nav.Link>
+            <Nav.Link href="#login" >
+             Log In
+            </Nav.Link>
+             <Nav.Link href="#signup" disabled >
+              |
             </Nav.Link>
 
             {/* Dropdown Menu with Hamburger Icon */}
