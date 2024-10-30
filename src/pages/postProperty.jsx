@@ -3,12 +3,21 @@ import Carousel from "react-bootstrap/Carousel";
 import PhoneInput from "react-phone-input-2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-phone-input-2/lib/style.css";
-import '../style/postProperty.css'
+import "../style/postProperty.css";
+import { useState } from "react";
 
 function PostProperty() {
+  const [selectedType, setSelectedType] = useState("Residential");
+  const [selectedAdType, setSelectedAdType] = useState(null);
+
+  const adTypes = {
+    Residential: ["Rent", "Resale","PG/Hostel","Flatmates"],
+    Commercial: ["Rent", "Sale"],
+    "Land/Plot": ["Resale"],
+  };
   return (
     <>
-      <div className="container" style={{marginTop: "100px"}}>
+      <div className="container" style={{ marginTop: "100px" }}>
         <div className="top d-flex align-items-center justify-content-between">
           <h1 className="fw-semibold fs-4" style={{ color: "#424949" }}>
             Sell or Rent your property for free
@@ -217,13 +226,12 @@ function PostProperty() {
               </div>
             </div>
             <div className="row mb-3">
-              <div className="col" style={{border: "0 solid #e5e7eb"}}>
+              <div className="col" style={{ border: "0 solid #e5e7eb" }}>
                 <PhoneInput
                   country={"np"}
                   value=""
                   inputClass="form-control"
                   containerClass="w-100"
-                  
                 />
               </div>
               <div className="col">
@@ -268,25 +276,52 @@ function PostProperty() {
               </label>
             </div>
 
-            <div class="">
-  <div className="text-center mt-4 mb-3">Property type</div>
-  <div className="">
-    <div className="active ">Residential</div>
-    <div className="">Commercial</div>
-    <div className="">Land/Plot</div>
-    </div>
-    <span className="">New</span>
-    <div className="">
-      <div className="">Select Property Ad Type</div>
-      <div className=""><div class="active">Rent</div>
-      <div className="">Resale</div>
-      <div className="">PG/Hostel</div>
-      <div className="">Flatmates</div>
-      </div></div><div className="">
-        <button className="btn btn-primary btn-lg btn-block" id="" type="button">Start Posting Your Ad For FREE</button>
-        </div>
-        </div>
+            <div className="property-nav">
+              <div className="text-center mt-4 mb-4">Property Type</div>
 
+              <div className="property-types">
+                {["Residential", "Commercial", "Land/Plot"].map((type) => (
+                  <div
+                    key={type}
+                    className={`property-type ${
+                      selectedType === type ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setSelectedType(type);
+                      setSelectedAdType(null); // Clear selected ad type when changing property type
+                    }}
+                  >
+                    {type}
+                  </div>
+                ))}
+              </div>
+
+              <div className="property-ad-type-section">
+                <div className="text-center mb-2">Select Property Ad Type</div>
+                <div className="ad-types">
+                  {adTypes[selectedType]?.map((adType) => (
+                    <div
+                      key={adType}
+                      className={`ad-type ${
+                        selectedAdType === adType ? "active" : ""
+                      }`}
+                      onClick={() => setSelectedAdType(adType)}
+                    >
+                      {adType}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="post-ad-button">
+                <button
+                  className="btn btn-lg btn-block text-white" style={{fontSize: "18px"}}
+                  type="button"
+                >
+                  Start Posting Your Ad For FREE
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -295,5 +330,3 @@ function PostProperty() {
 }
 
 export default PostProperty;
-
-

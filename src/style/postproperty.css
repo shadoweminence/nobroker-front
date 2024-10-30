@@ -85,3 +85,66 @@ img {
 .custom-switch input:checked+.custom-slider:before {
   transform: translateX(20px);
 }
+
+.property-nav {
+  max-width: 400px;
+  margin: auto;
+}
+
+.property-type{
+  background-color: #f2f2f2;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    margin-left: -10px;
+    align-items: center;
+    padding: 8px 43px;
+    text-align: center;
+    width: 100%;
+}
+
+.property-ad-type-section{
+  background-color: rgb(255, 252, 252);
+  border: 1px solid rgb(209, 209, 209);
+  height: 100%;
+  width: 600px;
+  padding: 25px 40px;
+  margin-left: -100px;
+}
+
+.ad-type{
+  background-color: rgb(255, 252, 252);
+  border: 1px solid rgb(209, 209, 209);
+  height: 100%;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.property-types, .ad-types {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.property-type.active {
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 3px solid #009587;
+}
+.ad-type.active{
+  background-color: #009587;
+  color: #fff;
+}
+
+.post-ad-button {
+  text-align: center;
+  margin-top: 1em;
+  border-radius: none;
+  padding: 4px 40px;
+  background-color: #ff414d;
+}
