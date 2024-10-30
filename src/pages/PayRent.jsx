@@ -4,6 +4,7 @@ import Highlight from "../components/Highlight";
 import "../style/payRent.css";
 import Testmonials from "../components/Testmonials";
 import Faqs from "../components/Faqs";
+import QuickChat from "../components/QuickChat";
 const PayRent = () => {
   const services = [
     {
@@ -118,9 +119,16 @@ const PayRent = () => {
   };
   return (
     <div className=" w-full h-auto flex justify-center flex-col">
+      {/* quick chat button  */}
+
+      <QuickChat />
+
+      {/* forms */}
+
       <div className="w-full bg-blue text-white flex justify-center md:py-8 md:px-14">
         <div className="md:w-11/12 w-full flex md:flex-row flex-col">
           {/* left */}
+
           <div className="flex pt-4 md:pt-0 flex-col md:gap-8 gap-3 w-full">
             <h1 className="text-base font-bold md:ml-0 md:text-2xl">
               Pay Rent and Fees with Credit Cart
@@ -158,7 +166,9 @@ const PayRent = () => {
               })}
             </ul>
           </div>
+
           {/* right */}
+
           <div className="text-black w-full md:pl-16 pl-0">
             <div className="bg-white md:mt-4 mt-0 py-4 px-8 md:rounded-lg flex flex-col-reverse md:flex-col">
               <Highlight data={offers} click={handleOfferBox} />
@@ -238,7 +248,9 @@ const PayRent = () => {
           </div>
         </div>
       </div>
-      {/* notice */}
+
+      {/* benefits */}
+
       <div className="w-full flex items-center justify-center gap-4 py-16 md:flex-row flex-col flex-wrap">
         <div className="md:w-4/12 w-11/12 md:text-left text-center">
           <h1 className="text-xl mb-3">Earn money with NoBroker Pay</h1>
@@ -259,7 +271,9 @@ const PayRent = () => {
           Vistara SBI Card PRIME (Premium)
         </p>
       </div>
-      {/* tutorial */}
+
+      {/* How it works */}
+
       <div className="w-full flex items-center justify-center bg-dark_blue text-white py-16 gap-4 px-10 md:flex-row flex-col">
         <div className="flex flex-col items-center justify-center gap-4">
           <img
@@ -306,14 +320,18 @@ const PayRent = () => {
           </h4>
         </div>
       </div>
+
       {/* testmonials */}
+
       <div className="flex items-center flex-col py-10 bg-slate-200">
         <h1 className="text-center text-xl">
           Testimonials from our NoBroker Pay customers
         </h1>
         <Testmonials />
       </div>
+
       {/* faqs */}
+
       <div className="flex items-center flex-col py-10 bg-white">
         <h1 className="text-center text-xl">Frequently Asked Questions</h1>
         <Faqs />
