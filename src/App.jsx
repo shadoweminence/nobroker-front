@@ -11,7 +11,7 @@ function App() {
 <<<<<<< HEAD
       <Navb />
       {/* <Homepage/> */}
-      <PayRent />
+      {/* <PayRent /> */}
 =======
      <Navb/>
      {/* <Homepage/> */}
