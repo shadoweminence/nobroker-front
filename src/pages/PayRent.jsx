@@ -8,6 +8,8 @@ import { services } from "../components/services";
 import "../style/payRent.css";
 
 import verified from "../assets/payrent_images/verified-icon.svg";
+import dhamaka from "../assets/payrent_images/dhamaka_1.png";
+import logo from "../assets/payrent_images/logo.png";
 import bulb from "../assets/payrent_images/bulb.png";
 import step1 from "../assets/payrent_images/step1.svg";
 import step2 from "../assets/payrent_images/step2.svg";
@@ -15,23 +17,23 @@ import step3 from "../assets/payrent_images/step3.svg";
 const PayRent = () => {
   const offers = [
     {
-      img: "src/assets/payrent_images/logo.png",
+      img: logo,
       title: "Flat ₹100 off on Gift Vouchers on Rent Payment",
       link: "",
     },
     {
-      img: "src/assets/payrent_images/dhamaka_1.png",
+      img: dhamaka,
       title: "Guaranteed Cashback, upto 100% Processing Fees!",
       link: "",
     },
     {
-      img: "src/assets/payrent_images/dhamaka_1.png",
+      img: dhamaka,
       title:
         "It's raining cashback! Every 100th user gets ₹100 or ₹1000 cashback",
       link: "",
     },
     {
-      img: "src/assets/payrent_images/logo.png",
+      img: logo,
       title: "Win Cashback or Partner Offers on Rent and Fees payment",
       link: "",
     },
