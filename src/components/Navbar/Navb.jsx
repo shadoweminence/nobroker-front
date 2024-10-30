@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown"; // Import Dropdown from Bootstrap
-import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa"; // Import the hamburger icon
+import { FaBars, FaChevronDown, FaChevronRight, FaChevronUp } from "react-icons/fa"; // Import the hamburger icon
 import logo from "../../assets/images/title.png";
 import rent from "../../assets/images/rent.png";
 import property from "../../assets/images/property.png";
@@ -11,6 +11,7 @@ import flogo from "../../assets/images/flogo.png";
 import tlogo from "../../assets/images/tlogo.png";
 import glogo from "../../assets/images/glogo.png";
 import neww from "../../assets/images/neww.png";
+import house from "../../assets/images/house.png";
 
 function Navb() {
  const [user, setUser] = useState({ name: 'John Doe' });
@@ -75,7 +76,7 @@ const toggleResidentialPlans =(event)=>{
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="ms-auto my-2 my-lg-0">
+          <Nav className="ms-auto my-2 my-lg-0 d-none d-lg-flex">
             <Nav.Link href="#action1">
               <img
                 src={rent} // Use your imported image here
@@ -416,19 +417,34 @@ const toggleResidentialPlans =(event)=>{
               </div>
               </ul>
               </li>
-
-
                   </>
                 )}
 
                </Dropdown.Item>
 
               </Dropdown.Menu>
-              </Dropdown>
-
-             
+              </Dropdown>           
           </Nav>
+       <Nav className="me-auto d-lg-none">
+          <div className="container-fluid " style={{ backgroundColor: 'red'}}>
+            <Nav.Link href="#home" style={{color:"white"}}>
+              <i class="fa-regular fa-circle-user mx-2"  ></i>Login/Sign Up <FaChevronRight className="ms-5"/><br /><br />
+            </Nav.Link>
+ 
+           <Nav.Link href="#login" style={{backgroundColor:"white", fontSize:"0.8rem"}}>
+            <img src={house} alt="HOuse Icon" width="40" height="auto" />  Post your property  <span style={{ backgroundColor: "black", color: "white", padding: "0 5px" }}> FREE</span> <FaChevronRight />
+           </Nav.Link>
+          <br />
+             </div>
+          <div> Because <span style={{color:"green"}}> Your Home</span><br /> Deserves The Best.</div>
+            
+          
+            <Nav.Link href="#signup">Sign Up</Nav.Link>
+          </Nav> 
+        
         </Navbar.Collapse>
+
+       
       </Container>
     </Navbar>
   );
