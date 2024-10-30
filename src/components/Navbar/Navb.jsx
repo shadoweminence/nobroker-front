@@ -14,7 +14,7 @@ import neww from "../../assets/images/neww.png";
 import house from "../../assets/images/house.png";
 
 function Navb() {
- const [user, setUser] = useState({ name: 'John Doe' });
+
  const [showUserOptions, setShowUserOptions] = useState(false);
 const [showResidentialPlans, setShowResidentialPlans] = useState(false);
 const [showDashboard, setShowDashboard] = useState(false);
@@ -110,8 +110,10 @@ const toggleResidentialPlans =(event)=>{
                 id="dropdown-basic"
                className="p-0 text-black no-arrow " // Text color black and no padding
               >
-               <i class="fa-regular fa-circle-user"  ></i> {user.name}  {showUserOptions ?(<FaChevronUp className="ms-1"/>):(<FaChevronDown className="ms-1"/>)}
-
+                <span className="d-flex align-items-center">
+              <i class="fa-regular fa-circle-user"  ></i> {user.name}  {showUserOptions ?(<FaChevronUp className="ms-1"/>):(<FaChevronDown className="ms-1"/>)}
+                </span>
+               
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown-menu border-1">
                  <Dropdown.Item
@@ -132,8 +134,10 @@ const toggleResidentialPlans =(event)=>{
                 <Dropdown.Item
                   className="text-dark text-decoration-none " onClick={toggleResidentialPlans} style={{cursor:"pointer"}}
                 >
+                  <span className="d-flex align-items-center">
                  My Residential Plans
                  {showResidentialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+                </span>
 
                  {showResidentialPlans && (
                  <li>
@@ -150,8 +154,10 @@ const toggleResidentialPlans =(event)=>{
                  <Dropdown.Item
                   className="text-dark text-decoration-none " onClick={toggleCommercialPlans} style={{cursor:"pointer"}}
                 >
+                  <span className="d-flex align-items-center">
                   My Commercial Plan
                  {showCommercialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+                  </span>
 
                  {showCommercialPlans && (
                  <li>
@@ -169,8 +175,11 @@ const toggleResidentialPlans =(event)=>{
                  
                   className="text-dark text-decoration-none " onClick={toggleDashboard} style={{cursor:"pointer"}}
                 >
+
+                  <span className="d-flex align-items-center">
                  My Dashboard
                  {showDashboard ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+                  </span>
 
                  {showDashboard && (
                  <li>
@@ -188,8 +197,10 @@ const toggleResidentialPlans =(event)=>{
                  
                   className="text-dark text-decoration-none " onClick={toggleListing} style={{cursor:"pointer"}}
                 >
+                  <span className="d-flex align-items-center">
                  My Listing
                  {showListing ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+                    </span>
 
                  {showListing && (
                  <li>
@@ -257,7 +268,7 @@ const toggleResidentialPlans =(event)=>{
                 id="dropdown-basic"
                 className="p-0 text-black no-arrow " // Text color black and no padding
               >
-                <FaBars /> Menu
+                 <span className="d-flex align-items-center"><FaBars /> Menu </span>
               </Dropdown.Toggle>
               {/* Dropdown menu items */}
               <Dropdown.Menu  className="dropdown-menu border-1  " >
@@ -326,8 +337,10 @@ const toggleResidentialPlans =(event)=>{
                  
                   className="text-dark text-decoration-none " onClick={toggleCommercialPlans} style={{cursor:"pointer"}}
                 >
+                  <span className="d-flex align-items-center">
                  Commercial Plans
                  {showCommercialPlans ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
+                 </span>
 
                  {showCommercialPlans && (
                  <li>
@@ -376,9 +389,10 @@ const toggleResidentialPlans =(event)=>{
                   href="#action3"
                   className="text-dark text-decoration-none " onClick={toggleContactUs} 
                 >
+                  <span className="d-flex align-items-center">
                 Contact Us 
                 {showContactUs ?(<FaChevronUp className="ms-5"/>):(<FaChevronDown className="ms-5"/>)}
-               
+               </span>
 
                 {showContactUs && (
                   <>

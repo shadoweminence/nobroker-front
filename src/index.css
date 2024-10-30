@@ -34,3 +34,10 @@
 .dropdown-menu .no-border {
   border-bottom: none;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.noScroll {
+  overflow: hidden;
+}

@@ -1,18 +1,20 @@
 import { useState } from 'react'
 
-import './App.css'
 import Navb from './components/Navbar/Navb'
 import Homepage from './components/FrontPage/Homepage'
+import React from "react";
+import PayRent from "./pages/PayRent";
+// import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
      <Navb/>
-     <Homepage/>
+     {/* <Homepage/>
+      <PayRent /> */}
+      {/* <Navbar /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
