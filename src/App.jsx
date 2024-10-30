@@ -10,7 +10,7 @@ function App() {
   return (
     <>
      <Navb/>
-     <Homepage/>
+     {/* <Homepage/> */}
       <PayRent />
       {/* <Navbar /> */}
     </>
