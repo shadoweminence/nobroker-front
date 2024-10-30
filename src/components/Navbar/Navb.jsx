@@ -63,7 +63,7 @@ const toggleResidentialPlans =(event)=>{
     setShowContactUs(!showContactUs);
   }
   return (
-    <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top" >
+    <Navbar user={user} expand="lg" className="bg-body-tertiary" style={{ boxShadow: "0 5px 10px rgba(0,0,0,0.1)" }} fixed="top" >
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand href="#">

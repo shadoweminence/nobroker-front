@@ -7,7 +7,7 @@ import "react-phone-input-2/lib/style.css";
 function PostProperty() {
   return (
     <>
-      <div className="container mt-4">
+      <div className="container" style={{marginTop: "100px"}}>
         <div className="top d-flex align-items-center justify-content-between">
           <h1 className="fw-semibold fs-4" style={{ color: "#424949" }}>
             Sell or Rent your property for free

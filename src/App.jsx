@@ -5,13 +5,15 @@ import Homepage from './components/FrontPage/Homepage'
 import React from "react";
 import PayRent from "./pages/PayRent";
 // import Navbar from "./components/Navbar/Navbar";
+import PostProperty from './components/postProperty'
 
 function App() {
   return (
     <>
      <Navb/>
      {/* <Homepage/> */}
-      <PayRent />
+      {/* <PayRent /> */}
+      <PostProperty />
       {/* <Navbar /> */}
     </>
   );
