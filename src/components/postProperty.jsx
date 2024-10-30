@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import PhoneInput from "react-phone-input-2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-phone-input-2/lib/style.css";
+import '../style/postProperty.css'
 
 function PostProperty() {
   return (
