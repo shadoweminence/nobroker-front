@@ -67,7 +67,12 @@ function Navb() {
     setShowContactUs(!showContactUs);
   };
   return (
-    <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top">
+    <Navbar
+      user={user}
+      expand="lg"
+      className="bg-body-tertiary shadow-lg h-20"
+      fixed="top"
+    >
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand>
@@ -92,13 +97,15 @@ function Navb() {
                 />
               </Link>
             </Nav.Link>
-            <Nav.Link href="#action2">
-              <img
-                src={property} // Use your imported image here
-                alt="Property Icon"
-                width="140" // Adjust width as needed
-                height="auto" // Maintain aspect ratio
-              />
+            <Nav.Link>
+              <Link to="/post-property">
+                <img
+                  src={property} // Use your imported image here
+                  alt="Property Icon"
+                  width="140" // Adjust width as needed
+                  height="auto" // Maintain aspect ratio
+                />
+              </Link>
             </Nav.Link>
 
             {user ? (
