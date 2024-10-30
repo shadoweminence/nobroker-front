@@ -1,3 +1,7 @@
+import { useState } from 'react'
+
+import Navb from './components/Navbar/Navb'
+import Homepage from './components/FrontPage/Homepage'
 import React from "react";
 import PayRent from "./pages/PayRent";
 // import Navbar from "./components/Navbar/Navbar";
@@ -5,6 +9,8 @@ import PayRent from "./pages/PayRent";
 function App() {
   return (
     <>
+     <Navb/>
+     {/* <Homepage/> */}
       <PayRent />
       {/* <Navbar /> */}
     </>
