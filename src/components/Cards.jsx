@@ -1,6 +1,7 @@
 const Cards = ({ data, visible, click }) => {
   return (
     <div
+      onClick={click}
       className={`${
         visible ? "flex" : "hidden"
       } h-screen w-full  items-center justify-center bg-black bg-opacity-50 fixed top-0 left-0`}

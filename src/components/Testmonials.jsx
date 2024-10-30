@@ -1,46 +1,47 @@
 import React from "react";
+import user from "../assets/images/womens.webp";
 
 const Testmonials = () => {
   const reviews = [
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "5",
     },
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "4",
     },
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "3",
     },
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "4",
     },
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "2",
     },
     {
       comment:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptates sequi sunt, culpa distinctio inventore nihil asperiores.Expedita tempora esse nisi quod dignissimos exercitationem error.",
-      userPic: "src/assets/images/womens.webp",
+      userPic: user,
       username: "ajnabi",
       rating: "5",
     },
