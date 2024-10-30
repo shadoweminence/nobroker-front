@@ -14,7 +14,7 @@ import neww from "../../assets/images/neww.png";
 import house from "../../assets/images/house.png";
 
 function Navb() {
- const [user, setUser] = useState({ name: 'John Doe' });
+ const [user, setUser] = useState(false);
  const [showUserOptions, setShowUserOptions] = useState(false);
 const [showResidentialPlans, setShowResidentialPlans] = useState(false);
 const [showDashboard, setShowDashboard] = useState(false);
