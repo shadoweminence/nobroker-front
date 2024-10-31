@@ -111,6 +111,7 @@ img {
   height: 100%;
   width: 600px;
   padding: 25px 40px;
+  font-size: 14px;
   margin-left: -100px;
 }
 
@@ -148,3 +149,14 @@ img {
   padding: 4px 40px;
   background-color: #ff414d;
 }
+
+.help-call {
+  width: 90%;
+  background-color: #fceccf;
+  color: rgb(83, 83, 83);
+  text-align: center;
+  padding: 5px; 
+  margin-left: 5%;
+  font-size: 14px;
+}
+
