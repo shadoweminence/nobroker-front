@@ -45,10 +45,10 @@ body.noScroll {
 
 .nav-container {
   position: fixed; /* Fixes the nav to the left */
-  left: -800px; /* Offscreen initially */
+  left: -750px; /* Offscreen initially */
   top: 0; /* Align to the top */
 
-  width: 800px; /* Width of the nav */
+  width: 750px; /* Width of the nav */
   background-color: white; /* Background color */
   transition: left 0.3s ease; /* Transition for the sliding effect */
   z-index: 1000; /* Ensures it appears on top */
@@ -66,4 +66,10 @@ body.noScroll {
 
 .drop {
   background-color: rgb(249, 252, 255);
+}
+
+.custom-scroll {
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: auto;
 }
