@@ -1,17 +1,15 @@
-import React from "react";
-import Carousel from "react-bootstrap/Carousel";
 import PhoneInput from "react-phone-input-2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-phone-input-2/lib/style.css";
 import "../style/postProperty.css";
 import { useState } from "react";
+import { Carousel } from "react-bootstrap";
 
 function PostProperty() {
   const [selectedType, setSelectedType] = useState("Residential");
   const [selectedAdType, setSelectedAdType] = useState(null);
-
   const adTypes = {
-    Residential: ["Rent", "Resale","PG/Hostel","Flatmates"],
+    Residential: ["Rent", "Resale", "PG/Hostel", "Flatmates"],
     Commercial: ["Rent", "Sale"],
     "Land/Plot": ["Resale"],
   };
@@ -278,7 +276,6 @@ function PostProperty() {
 
             <div className="property-nav">
               <div className="text-center mt-4 mb-4">Property Type</div>
-
               <div className="property-types">
                 {["Residential", "Commercial", "Land/Plot"].map((type) => (
                   <div
@@ -295,7 +292,6 @@ function PostProperty() {
                   </div>
                 ))}
               </div>
-
               <div className="property-ad-type-section">
                 <div className="text-center mb-2">Select Property Ad Type</div>
                 <div className="ad-types">
@@ -315,7 +311,8 @@ function PostProperty() {
 
               <div className="post-ad-button">
                 <button
-                  className="btn btn-lg btn-block text-white" style={{fontSize: "18px"}}
+                  className="btn btn-lg btn-block text-white"
+                  style={{ fontSize: "18px" }}
                   type="button"
                 >
                   Start Posting Your Ad For FREE
@@ -324,17 +321,6 @@ function PostProperty() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="container">
-      
-          <span className="">
-            <div className="d-flex align-items-center" style={{backgroundColor: "#fceccf"}}>
-            <img src="https://www.nobroker.in/nb-new/public/Post-Your-Property/callback.svg" alt="callback" className="" style={{color: "black"}}/>
-            Give a missed call to 869-000-5267 to get help with your property listing
-            </div>
-            </span>
-            
       </div>
     </>
   );
