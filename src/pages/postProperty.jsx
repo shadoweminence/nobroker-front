@@ -325,6 +325,17 @@ function PostProperty() {
           </div>
         </div>
       </div>
+
+      <div className="container">
+      
+          <span className="">
+            <div className="d-flex align-items-center" style={{backgroundColor: "#fceccf"}}>
+            <img src="https://www.nobroker.in/nb-new/public/Post-Your-Property/callback.svg" alt="callback" className="" style={{color: "black"}}/>
+            Give a missed call to 869-000-5267 to get help with your property listing
+            </div>
+            </span>
+            
+      </div>
     </>
   );
 }
