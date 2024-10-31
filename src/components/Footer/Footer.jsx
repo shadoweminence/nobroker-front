@@ -318,7 +318,7 @@ const Footer = () => {
   return (
     <>
       <footer className="my-4">
-        <div className="flex text-center bg-zinc-100 cursor-pointer">
+        <div className="flex text-center bg-zinc-100 cursor-pointer overflow-auto sm:overflow-auto">
           <div className="p-4 w-full bg-zinc-300 ">
             Properties & Flats for Sale
           </div>
@@ -330,7 +330,7 @@ const Footer = () => {
           <div className="p-4 w-full">New Projects & Plots</div>
           <div className="p-4 w-full">Independent Houses & Villas</div>
         </div>
-        <div className="grid grid-cols-5 mx-6 my-2">
+        <div className="md:grid md:grid-cols-5 mx-6 my-2 flex overflow-auto">
           {footerData.map((item) => (
             <div className="p-4" key={item.id}>
               <h2 className="font-medium mb-2 text-sm">{item.flatsForSale}</h2>
@@ -362,8 +362,8 @@ const Footer = () => {
           <div>
             <h2 className="font-bold text-xl pb-6">NoBroker services</h2>
           </div>
-          <div className="flex justify-between gap-8">
-            <div className="w-1/2">
+          <div className="flex justify-between gap-8 flex-col md:flex-row">
+            <div className="md:w-1/2 w-full">
               <h3 className="mb-4">Buy</h3>
               <div className="flex gap-4 flex-wrap">
                 {noBrokerServiceForSell.map((item) => (
@@ -373,7 +373,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full">
               <h3 className="mb-4">Rent</h3>
               <div className="flex gap-4 flex-wrap">
                 {noBrokerServiceForRent.map((item) => (
@@ -386,9 +386,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-around bg-zinc-200 p-8 border-y border-gray-400">
+        <div className="flex justify-around bg-zinc-200 p-8 border-y border-gray-400 flex-col md:flex-row items-center">
           {/* left side */}
-          <div className="flex flex-col items-center border-r w-1/2 border-gray-400 gap-2">
+          <div className="flex flex-col items-center md:border-r border-b md:border-b-0 md:w-1/2 border-gray-400 gap-2 pb-4">
             <div className="font-semibold">Find Property</div>
             <div>Select from thousands of options, without brokerage.</div>
             <button className="bg-slate-800 text-white px-4 py-1 rounded-md">
@@ -396,7 +396,7 @@ const Footer = () => {
             </button>
           </div>
           {/* right side */}
-          <div className="flex flex-col items-center w-1/2 gap-2">
+          <div className="flex flex-col items-center md:w-1/2 gap-2 pt-4">
             <div className="font-semibold">List Your Property</div>
             <div>For Free. Without any brokerage.</div>
             <button className="bg-slate-800 text-white px-4 py-1 rounded-md">
@@ -405,8 +405,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-nowrap justify-center p-8 gap-12">
-          <Link>About Us</Link>
+        <div className="flex sm:flex-nowrap justify-center p-8 sm:gap-12 gap-2.5 flex-wrap text-sm">
+          <Link to="/about-us">About Us</Link>
           <Link>Careers</Link>
           <Link>Terms & Conditions</Link>
           <Link>Privacy Policy</Link>
@@ -419,7 +419,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center gap-6">
-          <div className="flex gap-4">
+          <div className="flex sm:gap-4 gap-0">
             <img
               src="https://assets.nobroker.in/nb-new/public/Common/android_download.svg"
               alt=""
@@ -429,7 +429,7 @@ const Footer = () => {
               alt=""
             />
           </div>
-          <div className="flex text-xl gap-10">
+          <div className="flex text-xl sm:gap-10 gap-2">
             <Link className="bg-slate-300 p-2 rounded-full">
               <FaFacebook />
             </Link>
@@ -447,7 +447,9 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div>&copy; 2013-24 NoBroker Technologies Solution Pvt. Ltd.</div>
+          <div className="text-sm">
+            &copy; 2013-24 NoBroker Technologies Solution Pvt. Ltd.
+          </div>
         </div>
       </footer>
     </>
