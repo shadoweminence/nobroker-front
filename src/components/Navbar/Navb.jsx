@@ -306,7 +306,7 @@ useEffect(() => {
                   href="#action3"
                   className="text-dark text-decoration-none"
                 >
-               My Rental Agreements
+               My Rental Adreements
                 </Dropdown.Item>
 
                  <Dropdown.Item
@@ -348,18 +348,18 @@ useEffect(() => {
            
 
             {/* Dropdown Menu with Hamburger Icon */}
-            <Dropdown align="end"   >
-             
+            <Dropdown align="end" >
+              {" "}
               {/* Aligns the dropdown items to the right */}
               <Dropdown.Toggle
                 variant="link"
                 id="dropdown-basic"
                 className="p-0 text-black no-arrow " // Text color black and no padding
               >
-                 <span className="d-flex align-items-center "><FaBars /> Menu </span>
+                 <span className="d-flex align-items-center"><FaBars /> Menu </span>
               </Dropdown.Toggle>
               {/* Dropdown menu items */}
-              <Dropdown.Menu  className="dropdown-menu border-1 custom-scroll " >
+              <Dropdown.Menu  className="dropdown-menu border-1 custom-scroll" >
                 <Dropdown.Item
                   href="#action3"
                   className="text-dark text-decoration-none"
@@ -639,12 +639,12 @@ useEffect(() => {
                    <ul className="custom-dropdown-ul">
                       <Nav.Link>
                       <span className="d-flex align-items-center">
-                       <img src={walletSummary} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />
+                       <img src={walletSummary} alt="wallet icon" width="40" height="auto" style={{ marginRight: '8px' }} />
                         Wallet Summary
                             </span></Nav.Link>
                       <Nav.Link>
                          <span className="d-flex align-items-center">
-                       <img src={rewards} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />
+                       <img src={rewards} alt="rewards Icon" width="40" height="auto" style={{ marginRight: '8px' }} />
                         Rewards
                         </span></Nav.Link>
                     </ul>
@@ -669,7 +669,7 @@ useEffect(() => {
                        <img src={forSellers} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />For Sellers
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={forTenants} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />For Tenants
+                       <img src={forTenants} alt="key Icon" width="40" height="auto" style={{ marginRight: '8px' }} />For Tenants
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
                        <img src={forBuyers} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />For Buyers
@@ -713,19 +713,19 @@ useEffect(() => {
                  <li>
                    <ul className="custom-dropdown-ul">
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={packers1} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Packers and Movers
+                       <img src={packers1} alt="packers Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Packers and Movers
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={painting1} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Painting
+                       <img src={painting1} alt="painting Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Painting
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={cleaning} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Cleaning
+                       <img src={cleaning} alt="Cleaning Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Cleaning
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={interiors} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Interiors
+                       <img src={interiors} alt="Interior Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Interiors
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={furniture} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Furniture
+                       <img src={furniture} alt="Furniture Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Furniture
                        </span></Nav.Link>
                       
                     </ul>
@@ -743,13 +743,13 @@ useEffect(() => {
                  <li>
                    <ul className="custom-dropdown-ul">
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={payYourRent} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Pay Your Rent
+                       <img src={payYourRent} alt="Pay Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Pay Your Rent
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={depositPayment} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Deposit Payment
+                       <img src={depositPayment} alt="deposit Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Deposit Payment
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={billPayments} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Bill Payments
+                       <img src={billPayments} alt="Bill Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Bill Payments
                        </span></Nav.Link>
                       
                     </ul>
@@ -767,16 +767,16 @@ useEffect(() => {
                  <li>
                    <ul className="custom-dropdown-ul">
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={rentalAgreement} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Rental Agreement
+                       <img src={rentalAgreement} alt="Agreement Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Rental Agreement
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={policeIntimation} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Police Intimation
+                       <img src={policeIntimation} alt="police Intimation Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Police Intimation
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
                        <img src={tenantVerification} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Tenant Verification
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={propertyLegalAssistance} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Property Legal Assistance
+                       <img src={propertyLegalAssistance} alt="LegalAssistance Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Property Legal Assistance
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
                        <img src={homeLoan} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Home Loan
@@ -799,13 +799,13 @@ useEffect(() => {
                  <li>
                    <ul className="custom-dropdown-ul">
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={knowYourRent} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Know Your Rent
+                       <img src={knowYourRent} alt="KnowYourRent Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Know Your Rent
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={createRentReceipts} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Create Rent Receipts
+                       <img src={createRentReceipts} alt="createRentReceipts Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Create Rent Receipts
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={clickEarn} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Click & Earn
+                       <img src={clickEarn} alt="Click & Earn Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Click & Earn
                        </span></Nav.Link>
                     </ul>
                  </li>
@@ -821,19 +821,19 @@ useEffect(() => {
                  <li>
                    <ul className="custom-dropdown-ul">
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={supportTopics} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Support Topics
+                       <img src={supportTopics} alt="support Topics Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Support Topics
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={blog} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Blog
+                       <img src={blog} alt="Blog Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Blog
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={feedback} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Feedback
+                       <img src={feedback} alt="Feedback Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Feedback
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={aboutUs} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />About Us
+                       <img src={aboutUs} alt="About Us Icon" width="40" height="auto" style={{ marginRight: '8px' }} />About Us
                        </span></Nav.Link>
                       <Nav.Link> <span className="d-flex align-items-center">
-                       <img src={chatWithUs} alt="House Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Chat With Us
+                       <img src={chatWithUs} alt="Chat Icon" width="40" height="auto" style={{ marginRight: '8px' }} />Chat With Us
                        </span></Nav.Link>
                     </ul>
                  </li>
