@@ -9,13 +9,11 @@ import UserRoute from "./routes/UserRoute";
 function App() {
   return (
     <BrowserRouter>
-      <Navb />
       <Routes>
         <Route path="/*" element={<UserLayout />}>
           <Route path="*" element={<UserRoute />} />
         </Route>
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
