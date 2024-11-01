@@ -2,7 +2,7 @@ import React from "react";
 import Home from "../pages/Home";
 import PayRent from "../pages/PayRent";
 import { Routes, Route } from "react-router-dom";
-import PostProperty from "../pages/postProperty";
+import PostProperty from "../pages/PostProperty";
 
 const UserRoute = () => {
   return (
