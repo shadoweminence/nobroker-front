@@ -9,12 +9,9 @@ function App() {
   return (
     <>
       <Navb />
-      {/* <Homepage/> */}
       <PayRent />
-=======
-     <Navb/>
-     {/* <Homepage/> */}
-      {/* <PayRent /> */}
+
+      {/* <Homepage/> */}
       <PostProperty />
 
       {/* <Navbar /> */}

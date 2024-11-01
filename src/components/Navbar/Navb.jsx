@@ -62,11 +62,7 @@ function Navb() {
     setShowContactUs(!showContactUs);
   };
   return (
-<<<<<<< HEAD
-    <Navbar user={user} expand="lg" className="bg-body-tertiary " sticky="top">
-=======
-    <Navbar user={user} expand="lg" className="bg-body-tertiary" fixed="top" >
->>>>>>> e289deef576ff4bb71f88e1ba7a99de3b0d662b8
+    <Navbar user={user} expand="lg" className="bg-body-tertiary" sticky="top">
       <Container fluid>
         {/* Image as Navbar Brand */}
         <Navbar.Brand href="#">
