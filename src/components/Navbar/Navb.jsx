@@ -165,7 +165,7 @@ function Navb() {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse id="navbarScroll" >
           <Nav
             className="ms-auto my-2 my-lg-0 d-none d-lg-flex"
             style={{ fontSize: "0.8rem" }}
