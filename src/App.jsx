@@ -8,15 +8,13 @@ import UserRoute from "./routes/UserRoute";
 
 function App() {
   return (
-    <>
-      <Navb />
-      <PayRent />
-
-      {/* <Homepage/> */}
-      <PostProperty />
-
-      {/* <Navbar /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<UserLayout />}>
+          <Route path="*" element={<UserRoute />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -30,7 +30,7 @@ const Highlight = ({ data, click }) => {
                 <img src={img} alt="dhamaka" />
               </div>
               <div className="text-sm w-7/12">
-                <h3 className="font-semibold">{title}</h3>
+                <h3 className="font-semibold text-base">{title}</h3>
                 <button className="text-xs capitalize text-blue">
                   view all offers
                 </button>
