@@ -5,7 +5,7 @@ const Search = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center p-10">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 my-5">
           <h1 className="text-3xl">
             World's Largest NoBrokerage Property Site
           </h1>
