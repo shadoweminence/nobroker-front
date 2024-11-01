@@ -46,9 +46,9 @@ const Testmonials = () => {
     },
   ];
   return (
-    <div className="w-9/12 flex justify-start mt-10 overflow-hidden">
+    <div className="w-9/12 flex justify-start mt-10">
       <div
-        className="w-full flex gap-4 transition-transform overflow-y-auto py-2"
+        className="w-full flex gap-4 transition-transform overflow-y-scroll py-2"
         style={{ transform: `translateX(-000%)` }}
       >
         {reviews.map((rev, index) => {

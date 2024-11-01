@@ -1,19 +1,20 @@
-import { useState } from 'react'
-
-import Navb from './components/Navbar/Navb'
-import Homepage from './components/FrontPage/Homepage'
+import { useState } from "react";
+import Navb from "./components/Navbar/Navb";
 import React from "react";
-import PayRent from "./pages/PayRent";
-// import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserLayout from "./layout/UserLayout";
+import UserRoute from "./routes/UserRoute";
 
 function App() {
   return (
-    <>
-     <Navb/>
-     {/* <Homepage/> */}
-      <PayRent />
-      {/* <Navbar /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<UserLayout />}>
+          <Route path="*" element={<UserRoute />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

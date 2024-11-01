@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Remove arrow beside "Menu" dropdown */
 .no-arrow::after {
   display: none !important;
@@ -35,9 +39,6 @@
   border-bottom: none !important;
   outline: none;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body.noScroll {
   overflow: hidden;

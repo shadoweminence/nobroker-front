@@ -146,7 +146,7 @@ const PayRent = () => {
               {services.map((s, index) => {
                 const { img, name, des, link, linkName } = s;
                 return (
-                  <li key={index} className="flex gap-16 items-end">
+                  <li key={index} className="flex gap-8 items-end">
                     <div className="h-16 w-16 rounded-lg bg-white overflow-hidden flex-shrink-0 p-2">
                       <img
                         src={img}
@@ -231,7 +231,7 @@ const PayRent = () => {
                 <button className="bg-red hover:bg-rose-700 py-2 text-white font-semibold">
                   Get Started
                 </button>
-                <div className="bg-gray-200 flex gap-3 p-2 rounded-t-md mt-6">
+                <div className="bg-gray-200 flex gap-3 p-3 rounded-t-md mt-6 bg-slate-200">
                   <img src="src/assets/payrent_images/power.svg" alt="icon" />
                   <div>
                     <h1 className="text-sm font-semibold">
@@ -254,14 +254,18 @@ const PayRent = () => {
       <div className="w-full flex items-center justify-center gap-4 py-16 md:flex-row flex-col flex-wrap">
         <div className="md:w-4/12 w-11/12 md:text-left text-center">
           <h1 className="text-xl mb-3">Earn money with NoBroker Pay</h1>
-          <h4 className="text-slate-400">
+          <h4 className="text-slate-400 text-xl">
             Start paying rent using your credit card and earn miles, cashback
             and reward points.
           </h4>
         </div>
-        <div className="md:w-4/12 w-11/12 px-6 py-8 border-2 bg-slate-50 border-blue flex gap-3">
-          <img src="src/assets/payrent_images/bulb.png" alt="bulb" />
-          <h3>
+        <div className="md:w-4/12 w-11/12 px-6 py-8 border-2 bg-slate-50 border-blue flex gap-3 items-center">
+          <img
+            src="src/assets/payrent_images/bulb.png"
+            alt="bulb"
+            className="w-8 h-8"
+          />
+          <h3 className="text-base">
             You can earn up to ₹30,000* by just paying rent for a year by using
             your credit card
           </h3>
@@ -284,7 +288,7 @@ const PayRent = () => {
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">1</span>
           </h1>
-          <h2>Fill Transaction Detail</h2>
+          <h2 className="text-xl font-semibold">Fill Transaction Detail</h2>
           <h4 className="font-light text-sm text-center">
             Provide your beneficiary bank details, and we will setup your
             account.
@@ -299,7 +303,7 @@ const PayRent = () => {
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">2</span>
           </h1>
-          <h2>Make Payment</h2>
+          <h2 className="text-xl font-semibold">Make Payment</h2>
           <h4 className="font-light text-sm text-center">
             Make payment through your credit card or debit card.
           </h4>
@@ -313,7 +317,7 @@ const PayRent = () => {
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">3</span>
           </h1>
-          <h2>Payment Credited!</h2>
+          <h2 className="text-xl font-semibold">Payment Credited!</h2>
           <h4 className="font-light text-sm text-center">
             Your payment is credited to your beneficiary’s bank account within 2
             working days.
