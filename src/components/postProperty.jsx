@@ -3,12 +3,11 @@ import Carousel from "react-bootstrap/Carousel";
 import PhoneInput from "react-phone-input-2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-phone-input-2/lib/style.css";
-import '../style/postProperty.css'
 
 function PostProperty() {
   return (
     <>
-      <div className="container" style={{marginTop: "100px"}}>
+      <div className="container mt-4">
         <div className="top d-flex align-items-center justify-content-between">
           <h1 className="fw-semibold fs-4" style={{ color: "#424949" }}>
             Sell or Rent your property for free
@@ -289,6 +288,17 @@ function PostProperty() {
 
           </div>
         </div>
+      </div>
+
+      <div className="container">
+      
+          <span className="">
+            <div className="d-flex align-items-center" style={{backgroundColor: "#fceccf"}}>
+            <img src="https://www.nobroker.in/nb-new/public/Post-Your-Property/callback.svg" alt="callback" className="" style={{color: "black"}}/>
+            Give a missed call to 869-000-5267 to get help with your property listing
+            </div>
+            </span>
+            
       </div>
     </>
   );

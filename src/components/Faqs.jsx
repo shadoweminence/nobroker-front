@@ -33,11 +33,11 @@ const Faqs = () => {
       {content.map((cont, index) => {
         const { question, answer } = cont;
         return (
-          <Fragment key={index}>
+          <Fragment>
             <hr />
             <details
               className="group [&_summary::-webkit-details-marker]:hidden w-full"
-              close
+              open
             >
               <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
                 <div className="flex items-center gap-2">

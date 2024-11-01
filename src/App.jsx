@@ -1,9 +1,10 @@
-import React from "react";
-import PayRent from "./pages/PayRent";
+import { useState } from "react";
 import Navb from "./components/Navbar/Navb";
-import Homepage from "./components/FrontPage/Homepage";
-// import Navbar from "./components/Navbar/Navbar";
-import PostProperty from "./components/postProperty";
+import React from "react";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserLayout from "./layout/UserLayout";
+import UserRoute from "./routes/UserRoute";
 
 function App() {
   return (

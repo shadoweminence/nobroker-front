@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body.noScroll {
-  overflow: hidden;
-}
-
 /* Remove arrow beside "Menu" dropdown */
 .no-arrow::after {
   display: none !important;
@@ -28,7 +24,6 @@ body.noScroll {
   font-size: small;
   padding: 20px;
 }
-
 /* Add a border line between each dropdown item */
 .dropdown-menu .dropdown-item:not(:last-child) {
   border-bottom: 1px solid #8d0c0c;
@@ -42,4 +37,8 @@ body.noScroll {
 /* Remove border for items inside the toggled sections */
 .dropdown-menu .no-border {
   border-bottom: none;
+}
+
+body.noScroll {
+  overflow: hidden;
 }

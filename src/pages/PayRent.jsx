@@ -1,39 +1,110 @@
 import { useState } from "react";
 import Cards from "../components/Cards";
 import Highlight from "../components/Highlight";
+import "../style/payRent.css";
 import Testmonials from "../components/Testmonials";
 import Faqs from "../components/Faqs";
 import QuickChat from "../components/QuickChat";
-import { services } from "../components/services";
-import "../style/payRent.css";
-
-import verified from "../assets/payrent_images/verified-icon.svg";
-import dhamaka from "../assets/payrent_images/dhamaka_1.png";
-import logo from "../assets/payrent_images/logo.png";
-import bulb from "../assets/payrent_images/bulb.png";
-import step1 from "../assets/payrent_images/step1.svg";
-import step2 from "../assets/payrent_images/step2.svg";
-import step3 from "../assets/payrent_images/step3.svg";
 const PayRent = () => {
+  const services = [
+    {
+      img: "src/assets/payrent_images/Instacash-icon.svg",
+      name: "NB InstaCash",
+      des: "Get Instant Cash Upto ₹10 Lakhs",
+      link: "https://www.nobroker.in/instacash/landing?isHybrid=true&hybridActionBar=false&nbFr=rent_page_desktop",
+      linkName: "Withdraw Now",
+    },
+    {
+      img: "src/assets/payrent_images/dhamaka_1.png",
+      name: "CashBack Dhamaka",
+      des: "It's raining cashback! Every 100th user gets ₹100 or ₹1000 cashback",
+      link: "",
+      linkName: "View winners",
+    },
+    {
+      img: "src/assets/payrent_images/renter_club.svg",
+      name: "Renter's Club",
+      des: "Get 50% Off on processing fees by inviting your friends",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/card.svg",
+      name: "Now pay Society Maintenance too",
+      des: "All your property payments at one place - rent, maintenance, deposit, token",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/credit_card.svg",
+      name: "Earn upto ₹30,000/- in Rewards",
+      des: "Earn miles and reward points on your Visa and Mastercard cards plus enjoy upto 45 days interest free credit period.",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/no_hidden_cost.svg",
+      name: "Earn upto ₹30,000/- in Rewards",
+      des: "Earn miles, get cash back and reward points on every property payment with your card.",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/credit_card.svg",
+      name: "Pay with Credit Card",
+      des: "We accept major cards like Visa and Mastercard so your property payment is hassle free.",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/money.svg",
+      name: "Enjoy 45 days interest free credit period",
+      des: "Depending on your card statement date",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/milestone.svg",
+      name: "Reach Milestones Faster",
+      des: "Earn rewards on those yearly spends with your credit card.",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/digital_rent_receipt.svg",
+      name: "Digital Receipts",
+      des: "Payment receipts are generated instantly and sent directly to your email ID. Claim your HRA with ease.",
+      link: "",
+      linkName: "",
+    },
+    {
+      img: "src/assets/payrent_images/no_broker_trust.svg",
+      name: "NoBroker Trust",
+      des: "NoBroker Pay is a product by NoBroker and is 100% secure with PCI compliant payment gateway.",
+      link: "",
+      linkName: "",
+    },
+  ];
+
   const offers = [
     {
-      img: logo,
+      img: "src/assets/payrent_images/logo.png",
       title: "Flat ₹100 off on Gift Vouchers on Rent Payment",
       link: "",
     },
     {
-      img: dhamaka,
+      img: "src/assets/payrent_images/dhamaka_1.png",
       title: "Guaranteed Cashback, upto 100% Processing Fees!",
       link: "",
     },
     {
-      img: dhamaka,
+      img: "src/assets/payrent_images/dhamaka_1.png",
       title:
         "It's raining cashback! Every 100th user gets ₹100 or ₹1000 cashback",
       link: "",
     },
     {
-      img: logo,
+      img: "src/assets/payrent_images/logo.png",
       title: "Win Cashback or Partner Offers on Rent and Fees payment",
       link: "",
     },
@@ -58,12 +129,12 @@ const PayRent = () => {
         <div className="md:w-11/12 w-full flex md:flex-row flex-col">
           {/* left */}
 
-          <div className="flex flex-col md:gap-8 gap-3 w-full">
+          <div className="flex pt-4 md:pt-0 flex-col md:gap-8 gap-3 w-full">
             <h1 className="text-base font-bold md:ml-0 md:text-2xl">
               Pay Rent and Fees with Credit Cart
             </h1>
             <div className="bg-dark_blue py-1 px-2 flex gap-2 items-center md:rounded-md md:w-80 w-full">
-              <img src={verified} alt="verified icon" />
+              <img src="src/assets/payrent_images/verified-icon.svg" alt="" />
               <span className="font-bold text-sm">
                 Lowest Charges. Instant Transfers.
               </span>
@@ -71,11 +142,11 @@ const PayRent = () => {
                 i
               </button>
             </div>
-            <ul className="md:flex hidden flex-col gap-8 w-full">
+            <ul className="md:flex hidden flex-col gap-8">
               {services.map((s, index) => {
                 const { img, name, des, link, linkName } = s;
                 return (
-                  <li key={index} className="flex gap-16 items-end w-full">
+                  <li key={index} className="flex gap-16 items-end">
                     <div className="h-16 w-16 rounded-lg bg-white overflow-hidden flex-shrink-0 p-2">
                       <img
                         src={img}
@@ -83,13 +154,10 @@ const PayRent = () => {
                         className="w-full h-full object-contain"
                       />
                     </div>
-                    <article className="flex flex-col gap-0">
+                    <article className="flex flex-col gap-1">
                       <h1 className="font-semibold text-sm">{name}</h1>
                       <p className="text-xs font-light">{des}</p>
-                      <a
-                        href={link}
-                        className="font-norma text-sm underline text-white"
-                      >
+                      <a href={link} className="font-norma text-sm underline">
                         {linkName}
                       </a>
                     </article>
@@ -163,7 +231,7 @@ const PayRent = () => {
                 <button className="bg-red hover:bg-rose-700 py-2 text-white font-semibold">
                   Get Started
                 </button>
-                <div className="bg-slate-200 flex gap-3 p-2.5 rounded-md mt-6">
+                <div className="bg-gray-200 flex gap-3 p-2 rounded-t-md mt-6">
                   <img src="src/assets/payrent_images/power.svg" alt="icon" />
                   <div>
                     <h1 className="text-sm font-semibold">
@@ -184,16 +252,16 @@ const PayRent = () => {
       {/* benefits */}
 
       <div className="w-full flex items-center justify-center gap-4 py-16 md:flex-row flex-col flex-wrap">
-        <div className="md:w-4/12 w-11/12 text-center">
+        <div className="md:w-4/12 w-11/12 md:text-left text-center">
           <h1 className="text-xl mb-3">Earn money with NoBroker Pay</h1>
-          <h4 className="text-slate-400 text-base">
+          <h4 className="text-slate-400">
             Start paying rent using your credit card and earn miles, cashback
             and reward points.
           </h4>
         </div>
-        <div className="md:w-4/12 w-11/12 px-6 py-8 border-2 bg-slate-50 border-blue flex gap-3 items-center">
-          <img src={bulb} alt="bulb" className="w-16 h-16" />
-          <h3 className="text-base">
+        <div className="md:w-4/12 w-11/12 px-6 py-8 border-2 bg-slate-50 border-blue flex gap-3">
+          <img src="src/assets/payrent_images/bulb.png" alt="bulb" />
+          <h3>
             You can earn up to ₹30,000* by just paying rent for a year by using
             your credit card
           </h3>
@@ -208,32 +276,44 @@ const PayRent = () => {
 
       <div className="w-full flex items-center justify-center bg-dark_blue text-white py-16 gap-4 px-10 md:flex-row flex-col">
         <div className="flex flex-col items-center justify-center gap-4">
-          <img src={step1} alt="icon" className="w-20 h-20" />
+          <img
+            src="src/assets/payrent_images/step1.svg"
+            alt="icon"
+            className="w-20 h-20"
+          />
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">1</span>
           </h1>
-          <h2 className="text-2xl">Fill Transaction Detail</h2>
+          <h2>Fill Transaction Detail</h2>
           <h4 className="font-light text-sm text-center">
             Provide your beneficiary bank details, and we will setup your
             account.
           </h4>
         </div>
         <div className="flex flex-col items-center justify-center gap-4">
-          <img src={step2} alt="icon" className="w-20 h-20" />
+          <img
+            src="src/assets/payrent_images/step2.svg"
+            alt="icon"
+            className="w-20 h-20"
+          />
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">2</span>
           </h1>
-          <h2 className="text-2xl">Make Payment</h2>
+          <h2>Make Payment</h2>
           <h4 className="font-light text-sm text-center">
             Make payment through your credit card or debit card.
           </h4>
         </div>
         <div className="flex flex-col items-center justify-center gap-4">
-          <img src={step3} alt="icon" className="w-20 h-20" />
+          <img
+            src="src/assets/payrent_images/step3.svg"
+            alt="icon"
+            className="w-20 h-20"
+          />
           <h1 className="border-2 border-white rounded-full flex items-center justify-center h-6 w-6">
             <span className="text-xs">3</span>
           </h1>
-          <h2 className="text-2xl">Payment Credited!</h2>
+          <h2>Payment Credited!</h2>
           <h4 className="font-light text-sm text-center">
             Your payment is credited to your beneficiary’s bank account within 2
             working days.

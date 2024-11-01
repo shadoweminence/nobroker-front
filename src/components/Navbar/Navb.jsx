@@ -18,12 +18,17 @@ import glogo from "../../assets/images/glogo.png";
 import neww from "../../assets/images/neww.png";
 import house from "../../assets/images/house.png";
 
+import LoginSignup from "../LoginSignup";
+import Modal from "../Modal";
+import { Link } from "react-router-dom";
+
 function Navb() {
   const [user, setUser] = useState(false);
   const [showUserOptions, setShowUserOptions] = useState(false);
   const [showResidentialPlans, setShowResidentialPlans] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showListing, setShowListing] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const [showCommercialPlans, setShowCommercialPlans] = useState(false);
   const [showContactUs, setShowContactUs] = useState(false);
@@ -62,34 +67,44 @@ function Navb() {
     setShowContactUs(!showContactUs);
   };
   return (
-    <Navbar user={user} expand="lg" className="bg-body-tertiary" sticky="top">
+<<<<<<< HEAD
+    <Navbar user={user} expand="lg" className="bg-body-tertiary " sticky="top">
+=======
+    <Navbar user={user} expand="lg" className="bg-body-tertiary" fixed="top" >
+>>>>>>> e289deef576ff4bb71f88e1ba7a99de3b0d662b8
       <Container fluid>
         {/* Image as Navbar Brand */}
-        <Navbar.Brand href="#">
-          <img
-            src={logo} // Use your imported image here
-            alt="Brand Logo"
-            width="160" // Adjust width as needed
-          />
+        <Navbar.Brand>
+          <Link to="/">
+            <img
+              src={logo} // Use your imported image here
+              alt="Brand Logo"
+              width="160" // Adjust width as needed
+            />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto my-2 my-lg-0 d-none d-lg-flex">
-            <Nav.Link href="#action1">
-              <img
-                src={rent} // Use your imported image here
-                alt="Rent Icon"
-                width="110" // Adjust width as needed
-                height="auto" // Maintain aspect ratio
-              />
+            <Nav.Link>
+              <Link to="/pay-rent">
+                <img
+                  src={rent} // Use your imported image here
+                  alt="Rent Icon"
+                  width="110" // Adjust width as needed
+                  height="auto" // Maintain aspect ratio
+                />
+              </Link>
             </Nav.Link>
-            <Nav.Link href="#action2">
-              <img
-                src={property} // Use your imported image here
-                alt="Property Icon"
-                width="140" // Adjust width as needed
-                height="auto" // Maintain aspect ratio
-              />
+            <Nav.Link>
+              <Link to="/post-property">
+                <img
+                  src={property} // Use your imported image here
+                  alt="Property Icon"
+                  width="140" // Adjust width as needed
+                  height="auto" // Maintain aspect ratio
+                />
+              </Link>
             </Nav.Link>
 
             {user ? (
@@ -264,11 +279,31 @@ function Navb() {
               </>
             ) : (
               <>
-                <Nav.Link href="#signup">Sign Up</Nav.Link>
+                <Nav.Link
+                  onClick={() => setIsLoginModalOpen(true)}
+                  className="cursor-pointer"
+                >
+                  Sign up
+                </Nav.Link>
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
-                <Nav.Link href="#login">Log In</Nav.Link>
+                {/* <Nav.Link href="#login" > */}
+                <Nav.Link
+                  onClick={() => setIsLoginModalOpen(true)}
+                  className="cursor-pointer"
+                >
+                  Log In
+                </Nav.Link>
+                <Modal
+                  isOpen={isLoginModalOpen}
+                  onClose={() => setIsLoginModalOpen(false)}
+                >
+                  {/* asjcnsan */}
+                  <LoginSignup />
+                </Modal>
+
+                {/* </Nav.Link> */}
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
