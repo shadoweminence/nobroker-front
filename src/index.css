@@ -24,6 +24,7 @@
   font-size: small;
   padding: 20px;
 }
+
 /* Add a border line between each dropdown item */
 .dropdown-menu .dropdown-item:not(:last-child) {
   border-bottom: 1px solid #8d0c0c;
@@ -45,18 +46,26 @@ body.noScroll {
 }
 
 .nav-container {
-  position: fixed; /* Fixes the nav to the left */
-  left: -750px; /* Offscreen initially */
-  top: 0; /* Align to the top */
+  position: fixed;
+  /* Fixes the nav to the left */
+  left: -750px;
+  /* Offscreen initially */
+  top: 0;
+  /* Align to the top */
 
-  width: 750px; /* Width of the nav */
-  background-color: white; /* Background color */
-  transition: left 0.3s ease; /* Transition for the sliding effect */
-  z-index: 1000; /* Ensures it appears on top */
+  width: 750px;
+  /* Width of the nav */
+  background-color: white;
+  /* Background color */
+  transition: left 0.3s ease;
+  /* Transition for the sliding effect */
+  z-index: 1000;
+  /* Ensures it appears on top */
 }
 
 .nav-container.slide-in {
-  left: 0; /* Move into view */
+  left: 0;
+  /* Move into view */
 }
 
 .nav-property {
