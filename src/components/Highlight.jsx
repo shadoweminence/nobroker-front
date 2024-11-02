@@ -15,7 +15,7 @@ const Highlight = ({ data, click }) => {
     <div className="shadow-md md:my-0 my-4 relative flex overflow-hidden w-full">
       <span className="h-full w-1 bg-green absolute left-0 top-0"></span>
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex transition-transform duration-500 ease-in-out w-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {data.map((o, index) => {
@@ -24,12 +24,12 @@ const Highlight = ({ data, click }) => {
             <div
               key={index}
               onClick={click}
-              className="flex p-3 gap-1 flex-shrink-0 w-full cursor-pointer"
+              className="flex p-3 gap-2 flex-shrink-0 w-full cursor-pointer"
             >
-              <div className="w-2/12">
+              <div className="w-3/12">
                 <img src={img} alt="dhamaka" />
               </div>
-              <div className="text-sm w-7/12">
+              <div className="text-sm w:9/12">
                 <h3 className="font-semibold text-base">{title}</h3>
                 <button className="text-xs capitalize text-blue">
                   view all offers
