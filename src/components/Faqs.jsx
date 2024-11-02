@@ -33,7 +33,7 @@ const Faqs = () => {
       {content.map((cont, index) => {
         const { question, answer } = cont;
         return (
-          <Fragment>
+          <Fragment key={index}>
             <hr />
             <details
               className="group [&_summary::-webkit-details-marker]:hidden w-full"
