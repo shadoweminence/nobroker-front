@@ -177,7 +177,7 @@ function Navb() {
 
   return (
     <>
-      <Navbar user={user} expand="lg" className="bg-body-tertiary d-none d-lg-flex" fixed="top">
+      <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top" style={{ boxShadow: "0 5px 10px rgba(0,0,0,0.1)" }}>
         <Container fluid>
           {/* Image as Navbar Brand */}
           <Navbar.Brand href="#">
