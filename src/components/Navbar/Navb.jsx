@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Container from "react-bootstrap/Container";
+import "../../style/nav.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Dropdown from "react-bootstrap/Dropdown"; // Import Dropdown from Bootstrap
