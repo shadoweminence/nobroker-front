@@ -177,7 +177,7 @@ function Navb() {
 
   return (
     <>
-      <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top">
+      <Navbar user={user} expand="lg" className="bg-body-tertiary d-none d-lg-flex" fixed="top">
         <Container fluid>
           {/* Image as Navbar Brand */}
           <Navbar.Brand href="#">
@@ -583,7 +583,7 @@ function Navb() {
         </Container>
       </Navbar>
 
-      <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top">
+      <Navbar user={user} expand="lg" className="bg-body-tertiary d-flex d-lg-none" fixed="top">
         <Container fluid>
 
           <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleNav} />
