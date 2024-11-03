@@ -180,7 +180,7 @@ function Navb() {
       <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top" style={{ boxShadow: "0 5px 10px rgba(0,0,0,0.1)" }}>
         <Container fluid>
           {/* Image as Navbar Brand */}
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             <img
               src={logo} // Use your imported image here
               alt="Brand Logo"
@@ -193,7 +193,7 @@ function Navb() {
             className="ms-auto my-2 my-lg-0 d-none d-lg-flex"
             style={{ fontSize: "0.8rem" }}
           >
-            <Nav.Link href="#action1">
+            <Nav.Link href="PayRent">
               <span className="d-flex align-items-center border p-1">
                 {" "}
                 <img
@@ -204,13 +204,13 @@ function Navb() {
                 | Pay Rent
               </span>
             </Nav.Link>
-            <Nav.Link href="#action2">
+            <Nav.Link href="PostProperty">
               <button className="nav-property">For Property Owners</button>
             </Nav.Link>
 
             {user ? (
               <>
-                <Nav.Link href="#action2">
+                <Nav.Link href="../../pages/PostProperty">
                   <img
                     src={neww} // Use your imported image here
                     alt="Property Icon"
@@ -380,11 +380,11 @@ function Navb() {
               </>
             ) : (
               <>
-                <Nav.Link href="#signup">Sign Up</Nav.Link>
+                <Nav.Link href="../LoginSignup">Sign Up</Nav.Link>
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
-                <Nav.Link href="#login">Log In</Nav.Link>
+                <Nav.Link href="../LoginSignup">Log In</Nav.Link>
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
@@ -407,7 +407,7 @@ function Navb() {
               {/* Dropdown menu items */}
               <Dropdown.Menu className="dropdown-menu border-1 custom-scroll">
                 <Dropdown.Item
-                  href="#action3"
+                  href="PostProperty"
                   className="text-dark text-decoration-none"
                 >
                   Post Your Property
@@ -587,7 +587,7 @@ function Navb() {
         <Container fluid>
 
           <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleNav} />
-          <Navbar.Brand href="#" className="mx-auto align-middle">
+          <Navbar.Brand href="/" className="mx-auto align-middle">
             <img
               src={logo} // Use your imported image here
               alt="Brand Logo"
@@ -616,7 +616,7 @@ function Navb() {
                   }}
                 >
                   <Nav.Link
-                    href="#home"
+                    href="LoginSignUp"
                     style={{ color: "white" }}
                     className="d-flex justify-content-between "
                   >
@@ -628,7 +628,7 @@ function Navb() {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="#login"
+                    href="PostProperty"
                     style={{
                       backgroundColor: "white",
                       fontSize: "0.8rem",
