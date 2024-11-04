@@ -4,12 +4,11 @@ import "react-phone-input-2/lib/style.css";
 import "../style/postproperty.css";
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import QuickChart from '../components/QuickChat'
+import QuickChart from "../components/QuickChat";
 import PostPropertyFAQ from "../components/postPropertyFAQ";
 import PostPropertyWork from "../components/postPropertyWork";
 import PostPropertyFeature from "../components/postPropertyFeature";
 import PostPropertyText from "../components/postPropertyText";
-
 
 function PostProperty() {
   const [selectedType, setSelectedType] = useState("Residential");
@@ -293,8 +292,9 @@ function PostProperty() {
                 {["Residential", "Commercial", "Land/Plot"].map((type) => (
                   <div
                     key={type}
-                    className={`property-type ${selectedType === type ? "active" : ""
-                      }`}
+                    className={`property-type ${
+                      selectedType === type ? "active" : ""
+                    }`}
                     onClick={() => {
                       setSelectedType(type);
                       setSelectedAdType(null);
@@ -312,8 +312,9 @@ function PostProperty() {
                   {adTypes[selectedType]?.map((adType) => (
                     <div
                       key={adType}
-                      className={`ad-type fw-light ${selectedAdType === adType ? "active" : ""
-                        }`}
+                      className={`ad-type fw-light ${
+                        selectedAdType === adType ? "active" : ""
+                      }`}
                       onClick={() => setSelectedAdType(adType)}
                     >
                       {adType}
@@ -343,7 +344,6 @@ function PostProperty() {
           <PostPropertyText />
 
           <PostPropertyFAQ />
-
         </div>
       </div>
     </>

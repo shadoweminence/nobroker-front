@@ -168,17 +168,23 @@ function Navb() {
       }
     };
 
-    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener("mousedown", handleOutsideClick);
 
     // Cleanup the event listener
     return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
 
   return (
     <>
-      <Navbar user={user} expand="lg" className="bg-body-tertiary " fixed="top" style={{ boxShadow: "0 5px 10px rgba(0,0,0,0.1)" }}>
+      <Navbar
+        user={user}
+        expand="lg"
+        className="bg-body-tertiary "
+        fixed="top"
+        style={{ boxShadow: "0 5px 10px rgba(0,0,0,0.1)" }}
+      >
         <Container fluid>
           {/* Image as Navbar Brand */}
           <Navbar.Brand href="/">
@@ -580,13 +586,16 @@ function Navb() {
               </Dropdown.Menu>
             </Dropdown>
           </Nav>
-
         </Container>
       </Navbar>
 
-      <Navbar user={user} expand="lg" className="bg-body-tertiary d-flex d-lg-none" fixed="top">
+      <Navbar
+        user={user}
+        expand="lg"
+        className="bg-body-tertiary d-flex d-lg-none"
+        fixed="top"
+      >
         <Container fluid>
-
           <Navbar.Toggle aria-controls="navbarScroll" onClick={toggleNav} />
           <Navbar.Brand href="/" className="mx-auto align-middle">
             <img
@@ -596,12 +605,11 @@ function Navb() {
             />
           </Navbar.Brand>
 
-
-
           <div
             ref={navRef}
-            className={`transform transition-transform duration-300 ease-in-out ${showNav ? 'translate-x-0' : '-translate-x-full'
-              } fixed top-0 left-0 w-3/4 h-full bg-white z-50  lg:hidden`}
+            className={`transform transition-transform duration-300 ease-in-out ${
+              showNav ? "translate-x-0" : "-translate-x-full"
+            } fixed top-0 left-0 w-3/4 h-full bg-white z-50  lg:hidden`}
           >
             <div id="navContainer" className="nav-container">
               <Nav
@@ -622,8 +630,8 @@ function Navb() {
                     className="d-flex justify-content-between "
                   >
                     <span style={{ marginBottom: "10px" }}>
-                      <i className="fa-regular fa-circle-user mx-2"></i>Login/Sign
-                      Up
+                      <i className="fa-regular fa-circle-user mx-2"></i>
+                      Login/Sign Up
                     </span>
                     <FaChevronRight />
                   </Nav.Link>
@@ -1426,9 +1434,8 @@ function Navb() {
               </Nav>
             </div>
           </div>
-
         </Container>
-      </Navbar >
+      </Navbar>
     </>
   );
 }
