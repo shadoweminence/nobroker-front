@@ -10,9 +10,9 @@ const LoginSignup = () => {
   return (
     <>
       <div className="flex justify-center items-center z-10 bg-white">
-        <div className="flex h-[500px] relative shadow-md shadow-slate-400">
+        <div className="flex md:flex-row flex-col h-[500px] relative shadow-md shadow-slate-400">
           {/* <RxCross1 className="absolute right-4 top-4 cursor-pointer text-xl" /> */}
-          <div className="flex flex-col gap-2 bg-slate-100 p-6 justify-center w-5/12 text-sm">
+          <div className="hidden md:flex flex-col gap-2 bg-slate-100 p-6 md:justify-center w-5/12 text-sm">
             <img
               src="https://assets.nobroker.in/nb-new/public/Signup/signupHome.png"
               alt=""
@@ -29,10 +29,24 @@ const LoginSignup = () => {
               <IoMdCheckmark /> 100 Cr+ Brokerage saved monthly.
             </div>
           </div>
-          <div className="flex flex-col justify-between p-8 mt-4 w-7/12">
-            <div className="flex flex-col gap-4">
-              <h2>Enter phone to continue</h2>
 
+          <div className="md:hidden flex flex-row-reverse md:justify-between gap-8 px-4 pt-4">
+            <img
+              src="https://assets.nobroker.in/nb-new/public/Signup/signupHome.png"
+              alt=""
+              className="mr-0 w-20 h-20"
+            />
+            <div>
+              <h2>Login / Sign up</h2>
+              <span className="text-sm">
+                Zero Brokerage. Thousands of new listings daily. 100 Cr+
+                Brokerage saved monthly.
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col md:h-auto h-full justify-between p-4 md:p-8 md:mt-4 md:w-7/12">
+            <div className="flex flex-col gap-4">
+              <h2 className="mb-0">Enter phone to continue</h2>
               <div>
                 <PhoneInput
                   defaultCountry="np"
@@ -41,7 +55,6 @@ const LoginSignup = () => {
                   inputStyle={{ width: "100%" }}
                 />
               </div>
-
               <button
                 type="submit"
                 className="bg-red-500 hover:bg-red-600 text-white w-full px-4 py-2 rounded-md"
@@ -49,7 +62,7 @@ const LoginSignup = () => {
                 Continue
               </button>
             </div>
-            <div>
+            <div className="text-center">
               <span className="text-xs">By continuing, you agree to our </span>
               <span className="hover:underline font-bold text-xs cursor-pointer">
                 Terms & Conditions
