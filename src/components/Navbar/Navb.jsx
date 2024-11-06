@@ -208,7 +208,7 @@ function Navb() {
             className="ms-auto my-2 my-lg-0 d-none d-lg-flex"
             style={{ fontSize: "0.8rem" }}
           >
-            <Nav.Link href="PayRent">
+            <Nav.Link href="pay-rent">
               <span className="d-flex align-items-center border p-1">
                 {" "}
                 <img
@@ -219,7 +219,7 @@ function Navb() {
                 | Pay Rent
               </span>
             </Nav.Link>
-            <Nav.Link href="PostProperty">
+            <Nav.Link href="post-property">
               <button className="nav-property">For Property Owners</button>
             </Nav.Link>
 
@@ -422,7 +422,7 @@ function Navb() {
               {/* Dropdown menu items */}
               <Dropdown.Menu className="dropdown-menu border-1 custom-scroll">
                 <Dropdown.Item
-                  href="PostProperty"
+                  href="post-property"
                   className="text-dark text-decoration-none"
                 >
                   Post Your Property
