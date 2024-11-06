@@ -10,11 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<UserLayout />}>
-          <Route path="/" element={<UserRoute />} />
-          <Route path="/LoginSignUp" element={<LoginSignup />} />
-          <Route path="/PayRent" element={<PayRent />} />
-          <Route path="/PostProperty" element={<PostProperty />} />
+        <Route path="/*" element={<UserLayout />}>
+          <Route path="*" element={<UserRoute />} />
         </Route>
       </Routes>
     </BrowserRouter>
