@@ -61,6 +61,8 @@ import blog from "../../assets/small_nav_images/blog.png";
 import feedback from "../../assets/small_nav_images/feedback.png";
 import aboutUs from "../../assets/small_nav_images/aboutUs.png";
 import chatWithUs from "../../assets/small_nav_images/chatWithUs.png";
+import Modal from "../Modal";
+import LoginSignup from "../LoginSignup";
 
 function Navb() {
   const location = useLocation();
@@ -90,6 +92,8 @@ function Navb() {
   const [showNav, setShowNav] = useState(false);
   const navRef = useRef(null);
   const toggleButtonRef = useRef(null);
+
+  const [isLoginSignupModelOpen, setLoginSignupModelOpen] = useState(false);
 
   const videoSrc =
     "blob:https://www.nobroker.in/cbd719f6-bc72-4621-8b6e-680031d0f281";
@@ -208,7 +212,7 @@ function Navb() {
             className="ms-auto my-2 my-lg-0 d-none d-lg-flex"
             style={{ fontSize: "0.8rem" }}
           >
-            <Nav.Link href="PayRent">
+            <Nav.Link href="pay-rent">
               <span className="d-flex align-items-center border p-1">
                 {" "}
                 <img
@@ -219,7 +223,7 @@ function Navb() {
                 | Pay Rent
               </span>
             </Nav.Link>
-            <Nav.Link href="PostProperty">
+            <Nav.Link href="post-property">
               <button className="nav-property">For Property Owners</button>
             </Nav.Link>
 
@@ -395,14 +399,24 @@ function Navb() {
               </>
             ) : (
               <>
-                <Nav.Link href="../LoginSignup">Sign Up</Nav.Link>
+                <Nav.Link onClick={() => setLoginSignupModelOpen(true)}>
+                  Sign Up
+                </Nav.Link>
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
-                <Nav.Link href="../LoginSignup">Log In</Nav.Link>
+                <Nav.Link onClick={() => setLoginSignupModelOpen(true)}>
+                  Log In
+                </Nav.Link>
                 <Nav.Link href="#" disabled>
                   |
                 </Nav.Link>
+                <Modal
+                  isOpen={isLoginSignupModelOpen}
+                  onClose={() => setLoginSignupModelOpen(false)}
+                >
+                  <LoginSignup />
+                </Modal>
               </>
             )}
 
@@ -422,7 +436,7 @@ function Navb() {
               {/* Dropdown menu items */}
               <Dropdown.Menu className="dropdown-menu border-1 custom-scroll">
                 <Dropdown.Item
-                  href="PostProperty"
+                  href="post-property"
                   className="text-dark text-decoration-none"
                 >
                   Post Your Property
