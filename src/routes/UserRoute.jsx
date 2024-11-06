@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import PayRent from "../pages/PayRent";
 import { Routes, Route } from "react-router-dom";
 import PostProperty from "../pages/PostProperty";
+import HomeService from "../pages/HomeService";
 
 const UserRoute = () => {
   return (

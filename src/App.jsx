@@ -5,6 +5,7 @@ import UserRoute from "./routes/UserRoute";
 import LoginSignup from "./components/LoginSignup";
 import PayRent from "./pages/PayRent";
 import PostProperty from "./pages/PostProperty";
+import HomeService from "./pages/HomeService";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/LoginSignUp" element={<LoginSignup />} />
           <Route path="/PayRent" element={<PayRent />} />
           <Route path="/PostProperty" element={<PostProperty />} />
+          <Route path="/HomeService" element={<HomeService />} />
         </Route>
       </Routes>
     </BrowserRouter>
