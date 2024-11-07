@@ -10,6 +10,17 @@ import digital_rent_receipt from "../assets/payrent_images/digital_rent_receipt.
 import no_broker_trust from "../assets/payrent_images/no_broker_trust.svg";
 import logo from "../assets/payrent_images/logo.png";
 import women from "../assets/images/womens.webp";
+import bathClean from "../assets/servicesImg/BathroomCleaning.webp";
+import fullHouse from "../assets/servicesImg/FullHouseCleaning.webp";
+import kithchenClean from "../assets/servicesImg/KitchenCleaning.webp";
+import premium from "../assets/servicesImg/PremiumHouseCleaning.webp";
+import sofaClean from "../assets/servicesImg/SofaCleaning.webp";
+import tapRepair from "../assets/servicesImg/TapRepair.webp";
+import switchBoardRepair from "../assets/servicesImg/SwitchBoardRepair.webp";
+import cupboardRep from "../assets/servicesImg/CupboardHinge.webp";
+import geysar from "../assets/servicesImg/GeyserRepair.webp";
+import fanRepair from "../assets/servicesImg/FanRepair.webp";
+import userone from "../assets/servicesImg/testimonial_manoj.webp";
 
 export const services = [
   {
@@ -157,5 +168,48 @@ export const reviews = [
     userPic: women,
     username: "ajnabi",
     rating: "5",
+  },
+];
+
+export const homeCleaningServices = [
+  { img: bathClean, title: "bathroom cleaning", link: "" },
+  { img: fullHouse, title: "full house cleaning", link: "" },
+  { img: kithchenClean, title: "kitchen cleaning", link: "" },
+  { img: premium, title: "premium cleaning", link: "" },
+  { img: sofaClean, title: "sofa cleaning", link: "" },
+];
+
+export const homeRepair = [
+  { img: tapRepair, title: "tap repair", link: "" },
+  { img: switchBoardRepair, title: "switch board repair", link: "" },
+  { img: cupboardRep, title: "cupboard repair", link: "" },
+  { img: geysar, title: "geyser repair", link: "" },
+  { img: fanRepair, title: "fan repair", link: "" },
+];
+
+export const servicesReviews = [
+  {
+    name: "Manoj dua",
+    service: "home cleaning",
+    img: userone,
+    rating: 5.1,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo debitis repellat explicabo dignissimos itaque a amet accusamus culpa similique non?",
+  },
+  {
+    name: "Manoj dua",
+    service: "home cleaning",
+    img: userone,
+    rating: 5.1,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo debitis repellat explicabo dignissimos itaque a amet accusamus culpa similique non?",
+  },
+  {
+    name: "Manoj dua",
+    service: "home cleaning",
+    img: userone,
+    rating: 5.1,
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo debitis repellat explicabo dignissimos itaque a amet accusamus culpa similique non?",
   },
 ];
