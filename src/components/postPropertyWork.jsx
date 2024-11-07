@@ -18,7 +18,7 @@ function PostPropertyWork() {
               <h4 className="fw-semibold fs-5" style={{ color: "#424949" }}>
                 Simple Listing Process
               </h4>
-              <div class="fw-lighter " style={{ color: "#787676" }}>
+              <div className="fw-lighter " style={{ color: "#787676" }}>
                 As an owner you can list your property in a few minutes. Just
                 fill out our super simple form. Your property will go live after
                 verification.
@@ -43,7 +43,7 @@ function PostPropertyWork() {
               <h4 className="fw-semibold fs-5" style={{ color: "#424949" }}>
                 Tenant Selects Property and Schedules an Appointment
               </h4>
-              <div class="fw-lighter " style={{ color: "#787676" }}>
+              <div className="fw-lighter " style={{ color: "#787676" }}>
                 If a tenant likes your property they will request for your
                 contact details. Both parties will receive contact information
                 and then arrange for a visit.
@@ -56,7 +56,7 @@ function PostPropertyWork() {
               <h4 className="fw-semibold fs-5" style={{ color: "#424949" }}>
                 Deal Closure
               </h4>
-              <div class="fw-lighter " style={{ color: "#787676" }}>
+              <div className="fw-lighter " style={{ color: "#787676" }}>
                 Owner and tenant meet to close the deal directly. NoBroker can
                 help create a rental agreement and deliver it to your doorstep.
               </div>
