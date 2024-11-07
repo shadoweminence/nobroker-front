@@ -5,7 +5,6 @@ import App from "./App.jsx";
 import Home from './pages/Home.jsx'
 import PayRent from './pages/PayRent.jsx'
 import PostProperty from "./pages/postProperty.jsx";
-import LoginSignup from "./components/LoginSignup.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
