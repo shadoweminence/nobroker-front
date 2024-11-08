@@ -6,11 +6,11 @@ import { Outlet } from "react-router-dom";
 const UserLayout = () => {
   return (
     <>
-      <Navb />
+      {/* <Navb />
       <div className="mt-20">
         <Outlet />
       </div>
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
