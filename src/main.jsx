@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import PayRent from "./pages/PayRent.jsx";
-import PostProperty from "./pages/postProperty.jsx";
+import PostProperty from "./pages/PostProperty.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
