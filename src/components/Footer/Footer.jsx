@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { TfiYoutube } from "react-icons/tfi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const footerData = [
@@ -315,47 +315,58 @@ const Footer = () => {
     { id: 32, service: "Plumbing Services Queries" },
   ];
 
+  const location = useLocation();
+  const path = location.pathname;
+
   return (
     <>
       <footer className="my-4">
-        <div className="flex text-center bg-zinc-100 cursor-pointer overflow-auto sm:overflow-auto">
-          <div className="p-4 w-full bg-zinc-300 ">
-            Properties & Flats for Sale
-          </div>
-          <div className="p-4 w-full">Flats for Rent</div>
-          <div className="p-4 w-full">PG / Hostels</div>
-          <div className="p-4 w-full">Flatmates</div>
-          <div className="p-4 w-full">Miscellaneous</div>
-          <div className="p-4 w-full">Commercial</div>
-          <div className="p-4 w-full">New Projects & Plots</div>
-          <div className="p-4 w-full">Independent Houses & Villas</div>
-        </div>
-        <div className="md:grid md:grid-cols-5 mx-6 my-2 flex overflow-auto">
-          {footerData.map((item) => (
-            <div className="p-4" key={item.id}>
-              <h2 className="font-medium mb-2 text-sm">{item.flatsForSale}</h2>
-              <div className="flex flex-col text-[12px] gap-1">
-                {item.flatData &&
-                  item.flatData.map((names) => (
-                    <span key={names.id}>{names.name}</span>
-                  ))}
+        {path != "/testimonials" ? (
+          <>
+            <div className="flex text-center bg-zinc-100 cursor-pointer overflow-auto sm:overflow-auto">
+              <div className="p-4 w-full bg-zinc-300 ">
+                Properties & Flats for Sale
               </div>
-              <h2 className="font-medium mb-2 text-sm">
-                {item.propertiesForSale}
-              </h2>
-              <div className="flex flex-col text-[12px] gap-1">
-                {item.propertyData &&
-                  item.propertyData.map((item) => (
-                    <span key={item.id}>{item.name}</span>
-                  ))}
-              </div>
-
-              <h2 className="font-medium mb-2 text-sm">
-                {item.independentFloor}
-              </h2>
+              <div className="p-4 w-full">Flats for Rent</div>
+              <div className="p-4 w-full">PG / Hostels</div>
+              <div className="p-4 w-full">Flatmates</div>
+              <div className="p-4 w-full">Miscellaneous</div>
+              <div className="p-4 w-full">Commercial</div>
+              <div className="p-4 w-full">New Projects & Plots</div>
+              <div className="p-4 w-full">Independent Houses & Villas</div>
             </div>
-          ))}
-        </div>
+            <div className="md:grid md:grid-cols-5 mx-6 my-2 flex overflow-auto">
+              {footerData.map((item) => (
+                <div className="p-4" key={item.id}>
+                  <h2 className="font-medium mb-2 text-sm">
+                    {item.flatsForSale}
+                  </h2>
+                  <div className="flex flex-col text-[12px] gap-1">
+                    {item.flatData &&
+                      item.flatData.map((names) => (
+                        <span key={names.id}>{names.name}</span>
+                      ))}
+                  </div>
+                  <h2 className="font-medium mb-2 text-sm">
+                    {item.propertiesForSale}
+                  </h2>
+                  <div className="flex flex-col text-[12px] gap-1">
+                    {item.propertyData &&
+                      item.propertyData.map((item) => (
+                        <span key={item.id}>{item.name}</span>
+                      ))}
+                  </div>
+
+                  <h2 className="font-medium mb-2 text-sm">
+                    {item.independentFloor}
+                  </h2>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          ""
+        )}
         <hr />
         {/* no broker service */}
         <div className="px-10 py-8">

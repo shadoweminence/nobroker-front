@@ -12,20 +12,20 @@ const LoginSignup = () => {
       <div className="flex justify-center items-center z-10 bg-white">
         <div className="flex md:flex-row flex-col h-[500px] relative shadow-md shadow-slate-400">
           {/* <RxCross1 className="absolute right-4 top-4 cursor-pointer text-xl" /> */}
-          <div className="hidden md:flex flex-col gap-2 bg-slate-100 p-6 md:justify-center w-5/12 text-sm">
+          <div className="hidden md:flex flex-col gap-2 bg-slate-100 p-6 md:justify-center w-[42%] text-sm">
             <img
               src="https://assets.nobroker.in/nb-new/public/Signup/signupHome.png"
               alt=""
               width="30%"
             />
             <div className="font-bold">Login / Sign up</div>
-            <div className="flex items-center">
+            <div className="flex items-center opacity-80 text-xs">
               <IoMdCheckmark /> Zero Brokerage.
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center opacity-80 text-xs">
               <IoMdCheckmark /> Thousands of new listings daily.
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center opacity-80 text-xs">
               <IoMdCheckmark /> 100 Cr+ Brokerage saved monthly.
             </div>
           </div>
@@ -46,7 +46,9 @@ const LoginSignup = () => {
           </div>
           <div className="flex flex-col md:h-auto h-full justify-between p-4 md:p-8 md:mt-4 md:w-7/12">
             <div className="flex flex-col gap-4">
-              <h2 className="mb-0">Enter phone to continue</h2>
+              <div className="mb-0 text-lg font-medium">
+                Enter phone to continue
+              </div>
               <div>
                 <PhoneInput
                   defaultCountry="np"

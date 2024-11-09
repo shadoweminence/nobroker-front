@@ -12,6 +12,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound.jsx";
+import Testimonials from "./pages/Testimonials.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/pay-rent" element={<PayRent />} />
       <Route path="/post-property" element={<PostProperty />} />
+      <Route path="/testimonials" element={<Testimonials />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

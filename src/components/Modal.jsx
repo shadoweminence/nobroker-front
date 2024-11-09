@@ -1,4 +1,5 @@
 import React from "react";
+import { RxCross1 } from "react-icons/rx";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -8,9 +9,9 @@ const Modal = ({ isOpen, onClose, children }) => {
       <div className="bg-gray-200 rounded-lg relative">
         <button
           onClick={onClose}
-          className="absolute hover:bg-red px-2 py-1 -red top-2 right-2 text-gray-500 hover:text-gray-700 hover:bg-red-600 cursor-pointer z-50 text-xl"
+          className="absolute hover:text-red-500 px-2 py-1 top-2 right-2 text-gray-500 hover:text-gray-700 cursor-pointer z-50 text-lg"
         >
-          X
+          <RxCross1 />
         </button>
         {children}
       </div>

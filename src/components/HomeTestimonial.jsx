@@ -57,7 +57,7 @@ const HomeTestimonial = () => {
   const scrollRight = () => {
     if (testimonialContainerRef.current) {
       testimonialContainerRef.current.scrollBy({
-        left: 300,
+        left: 400,
       });
     }
   };
@@ -65,7 +65,7 @@ const HomeTestimonial = () => {
   const scrollLeft = () => {
     if (testimonialContainerRef.current) {
       testimonialContainerRef.current.scrollBy({
-        left: -300,
+        left: -400,
       });
     }
   };
@@ -105,13 +105,13 @@ const HomeTestimonial = () => {
           className="my-10"
         ></iframe>
         <div
-          className="flex gap-8 w-11/12 flex-nowrap overflow-x-scroll behavior mt-10 scroll-smooth"
+          className="flex gap-12 w-11/12 flex-nowrap overflow-x-scroll behavior mt-10 scroll-smooth"
           ref={testimonialContainerRef}
         >
-          {review.map((item) => (
+          {[...review, ...review].map((item, index) => (
             <div
-              key={item.id}
-              className="bg-white p-3 min-w-[300px] h-56 overflow-y-scroll mb-2"
+              key={index}
+              className="bg-white p-3 min-w-[430px] h-64 overflow-y-scroll mb-2"
             >
               <div className="flex items-center">
                 <img
@@ -155,8 +155,10 @@ const HomeTestimonial = () => {
           )}
         </div>
         <hr className="border-2 border-white w-11/12 mt-4 mb-10" />
-        <div className="text-white underline cursor-pointer text-sm">
-          <Link to="/testimonial">More Testimonials</Link>
+        <div className=" underline cursor-pointer text-sm">
+          <Link to="/testimonials" className="text-white">
+            More Testimonials
+          </Link>
         </div>
       </div>
 
