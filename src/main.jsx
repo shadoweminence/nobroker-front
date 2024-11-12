@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
+import Rentreceipt from "./pages/Rentreceipt.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/pay-rent" element={<PayRent />} />
       <Route path="/post-property" element={<PostProperty />} />
+      <Route path="/rent-receipt" element={<Rentreceipt />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>

@@ -1,0 +1,45 @@
+body{
+  line-height: inherit;
+}
+.page-heading{
+  color: #464646;
+  font-size: 30px;
+  /* font-weight: 400; */
+}
+.page-subheading{
+  color: #464646;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+font-size: 14px;
+}
+form input::placeholder{
+font-size: 14px;
+}
+form input{
+  border: 1px solid #ccc !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    font-size: 14px;
+    line-height: 1.4;  
+    background-color: #fff;
+    color: #555;
+}
+form input:focus{
+  border: 1px solid rgb(51, 51, 51) !important;
+}
+.rentReceipt-btn{
+  border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    height: 40px;
+    overflow: hidden;
+    padding: 7px 25px;
+    width: 50%;
+    border: 1px solid transparent;
+}
+/* button{
+  align-items: center;
+  margin-left: 240px;
+} */
