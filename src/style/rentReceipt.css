@@ -29,17 +29,119 @@ form input{
 form input:focus{
   border: 1px solid rgb(51, 51, 51) !important;
 }
-.rentReceipt-btn{
+.rentReceipt-btn {
   border-radius: 2px;
-    font-size: 15px;
-    font-weight: 600;
-    height: 40px;
-    overflow: hidden;
-    padding: 7px 25px;
-    width: 50%;
-    border: 1px solid transparent;
+  font-size: 0.937rem;
+  font-weight: 600;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  width: auto; 
+  max-width: 50%; 
 }
-/* button{
+
+
+.rent-receipt{
+    background: url(https://assets.nobroker.in/nb-new/public/RentoPay/landing_features_bgr.png);
+    background-size: contain;
+    color: #fff;
+    padding: 35px 40px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rent-receipt h1{
+  font-size: 26px;
+  line-height: 1;
+}
+.rent-receipt h4{
+font-size: 14px;
+font-weight: 400;
+line-height: 1;
+margin-bottom: 28px;
+}
+
+.rent-receipt .img-box{
+background-color: #fff;
+height: 75px;
+width: 75px;
+border-radius: 6px;
+}
+
+.rent-receipt .title {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.rent-receipt .sub-title {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+
+.rent-receipt .btn-primary{
+  background: #e3324a linear-gradient(90deg, #fd3752, #fd3752);
+  background-position: 50%;
+  border-color: #fd3752;
+  transition: background 3s;
+}
+
+.text h2{
+  font-size: 22px;
+  font-weight: inherit;
+}
+
+.text p{
+  font-size: 14px;
+}
+
+.text ul li, ol li{
+  font-size: 14px;
+}
+
+/* faq */
+.faq-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.faq-item {
+  border-bottom: 1.5px solid #b1b1b1;
+  padding: 20px 0;
+}
+
+.faq-question {
+  display: flex;
+  font-weight: 500;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 240px;
-} */
+  cursor: pointer;
+  font-size: 16px;
+  color: #464646;
+  transition: color 0.1s ease;
+}
+
+.faq-question.active {
+  color: #009587;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  color: #464949;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate {
+  transform: rotate(-45deg);
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
