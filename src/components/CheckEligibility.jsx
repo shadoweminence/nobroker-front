@@ -143,7 +143,7 @@ const CheckEligibility = ({ selectedOption }) => {
         ) : null}
       </div>
 
-      <div className="flex justify-between items-end text-sm overflow-x-auto gap-4">
+      <div className="flex justify-between items-end text-sm overflow-x-auto gap-4 px-20">
         {(selectedOption === "Buy" ? buyData : rentData).map((item) => (
           <Link
             to={`/${item.text.toLowerCase().replaceAll(" ", "-")}`}
@@ -169,7 +169,7 @@ const CheckEligibility = ({ selectedOption }) => {
       <div className="py-10">
         <div className="flex flex-nowrap items-center justify-center gap-4">
           <hr className="w-full" />
-          <h2>Who&nbsp;use&nbsp;NoBroker</h2>
+          <h2 className="opacity-60">Why&nbsp;use&nbsp;NoBroker</h2>
           <hr className="w-full" />
         </div>
         <div>
@@ -183,7 +183,7 @@ const CheckEligibility = ({ selectedOption }) => {
                     className="mr-0 w-auto h-auto hover:scale-125 transition duration-300"
                   />
                   <div className="">{item.heading}</div>
-                  <span className="text-sm">{item.text}</span>
+                  <span className="text-sm w-8/12">{item.text}</span>
                 </div>
               </Link>
             ))}
