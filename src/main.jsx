@@ -14,6 +14,7 @@ import {
 import PageNotFound from "./components/PageNotFound.jsx";
 import Testimonials from "./pages/Testimonials.jsx";
 import Rentreceipt from "./pages/Rentreceipt.jsx";
+import RentalAgreement from "./pages/RentalAgreement.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="/post-property" element={<PostProperty />} />
       <Route path="/rent-receipt" element={<Rentreceipt />} />
       <Route path="/testimonials" element={<Testimonials />} />
+      <Route path="rental-agreement" element={<RentalAgreement />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

@@ -751,54 +751,58 @@ function Navb() {
                     </div>
                     <div>
                       <div
-                        className="d-flex align-items-center gap-5 mx-5"
+                        className="d-flex align-items-center gap-2 text-center"
                         style={{ fontSize: "0.8rem" }}
                       >
                         <Nav.Link
                           href="#"
-                          className="d-flex flex-column align-items-center gap-2 mx-4"
+                          className="d-flex flex-column align-items-center gap-2"
                         >
                           <img
                             src={painting}
                             alt="Painting Icon"
-                            width="100"
+                            width="50px"
                             height="auto"
+                            className="m-0"
                           />
                           <span>Painting</span>
                         </Nav.Link>
                         <Nav.Link
                           href="#"
-                          className="d-flex flex-column align-items-center gap-2 mx-4"
+                          className="d-flex flex-column align-items-center gap-2"
                         >
                           <img
                             src={packers}
                             alt="Packers & Movers Icon"
-                            width="150"
+                            width="50px"
                             height="auto"
+                            className="m-0"
                           />
                           <span>Packers & Movers</span>
                         </Nav.Link>
                         <Nav.Link
                           href="#"
-                          className="d-flex flex-column align-items-center gap-2 mx-4"
+                          className="d-flex flex-column align-items-center gap-2"
                         >
                           <img
                             src={homeCleaning}
                             alt="Home Cleaning Icon"
-                            width="150"
+                            width="50px"
                             height="auto"
+                            className="m-0"
                           />
                           <span>Home Cleaning</span>
                         </Nav.Link>
                         <Nav.Link
                           href="#"
-                          className="d-flex flex-column align-items-center gap-2 mx-4"
+                          className="d-flex flex-column align-items-center gap-2"
                         >
                           <img
                             src={acRepair}
                             alt="AC Repair Icon"
-                            width="150"
+                            width="50px"
                             height="auto"
+                            className="m-0"
                           />
                           <span>AC Repair</span>
                         </Nav.Link>

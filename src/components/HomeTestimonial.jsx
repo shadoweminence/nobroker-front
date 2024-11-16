@@ -90,7 +90,7 @@ const HomeTestimonial = () => {
   }, []);
 
   return (
-    <>
+    <div className="hidden md:block">
       <div className="bg-slate-600 py-10 items-center flex flex-col relative">
         <h1 className="text-white text-2xl">Our Customers Loves us</h1>
         <iframe
@@ -186,7 +186,7 @@ const HomeTestimonial = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
