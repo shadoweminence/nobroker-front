@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "../../style/nav.css";
 import Nav from "react-bootstrap/Nav";
@@ -441,12 +441,12 @@ function Navb() {
                 >
                   Post Your Property
                 </Dropdown.Item>
-                <Dropdown.Item
-                  href="#action4"
+                <Link
+                  to="/rental-agreement"
                   className="text-dark text-decoration-none"
                 >
                   Rental Agreement
-                </Dropdown.Item>
+                </Link>
                 <Dropdown.Item
                   href="#action5"
                   className="text-dark text-decoration-none"
